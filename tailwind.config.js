@@ -54,8 +54,10 @@ module.exports = {
                 },
             },
             fontFamily: {
-                nunito: ['Nunito', 'sans-serif'],
-            },
+                "vazir": "vazir",
+                "vazirLight": "vazir light",
+                "vazirBold": "vazir bold",
+              },
             spacing: {
                 4.5: '18px',
             },

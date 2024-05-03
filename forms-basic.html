@@ -13,12 +13,6 @@
         <script defer src="assets/js/popper.min.js"></script>
         <script defer src="assets/js/tippy-bundle.umd.min.js"></script>
         <script defer src="assets/js/sweetalert.min.js"></script>
-        <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
-        <style>
-            html,body {
-                font-family: Vazirmatn, sans-serif !important;
-            }
-        </style>
         <style scoped>
             /* range picker */
             input[type='range'] {
@@ -64,7 +58,7 @@
 
     <body
         x-data="main"
-        class="relative overflow-x-hidden text-sm antialiased font-normal font-nunito"
+        class="relative overflow-x-hidden text-sm antialiased font-normal"
         :class="[ $store.app.sidebar ? 'toggle-sidebar' : '', $store.app.theme, $store.app.menu, $store.app.layout,$store.app.rtlClass]"
     >
         <!-- sidebar menu overlay -->

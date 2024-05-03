@@ -2708,6 +2708,24 @@ video {
   margin-top: 0;
 }
 
+@font-face {
+  font-family: "vazir";
+
+  src: url('../fonts/woff2/FD/Vazir-FD.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: "vazir light";
+
+  src: url('../fonts/woff2/FD/Vazir-Light-FD.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: "vazir bold";
+
+  src: url('../fonts/woff2/FD/Vazir-Bold-FD.woff2') format('woff2');
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -2719,7 +2737,7 @@ html {
 body {
   --tw-bg-opacity: 1;
   background-color: rgb(250 250 250 / var(--tw-bg-opacity));
-  font-family: Nunito, sans-serif;
+  font-family: vazir;
 }
 
 body.dark {
@@ -4202,22 +4220,22 @@ table thead tr,
 table thead tr th,
     table tfoot tr th,
     table tbody tr td {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
   padding-left: 1rem;
   padding-right: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 [dir="ltr"] table thead tr th,[dir="ltr"] 
     table tfoot tr th,[dir="ltr"] 
     table tbody tr td {
-  text-align: left;
+  text-align: center;
 }
 
 [dir="rtl"] table thead tr th,[dir="rtl"] 
     table tfoot tr th,[dir="rtl"] 
     table tbody tr td {
-  text-align: right;
+  text-align: center;
 }
 
 table thead tr th,
@@ -5377,6 +5395,10 @@ pre {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.grid-cols-7 {
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -6270,11 +6292,6 @@ pre {
   background-color: rgb(255 255 255 / 0.3);
 }
 
-.bg-rose-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(244 63 94 / var(--tw-bg-opacity));
-}
-
 .\!bg-none {
   background-image: none !important;
 }
@@ -6554,6 +6571,10 @@ pre {
   padding: 1.75rem;
 }
 
+.p-8 {
+  padding: 2rem;
+}
+
 .\!py-0 {
   padding-top: 0px !important;
   padding-bottom: 0px !important;
@@ -6748,8 +6769,8 @@ pre {
   vertical-align: middle;
 }
 
-.font-nunito {
-  font-family: Nunito, sans-serif;
+.font-vazir {
+  font-family: vazir;
 }
 
 .text-2xl {
@@ -8011,6 +8032,11 @@ pre {
 
 .hover\:bg-white-light\/90:hover {
   background-color: rgb(224 230 237 / 0.9);
+}
+
+.hover\:bg-yellow-50:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 252 232 / var(--tw-bg-opacity));
 }
 
 .hover\:\!text-primary:hover {
