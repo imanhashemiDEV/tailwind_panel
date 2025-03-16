@@ -39,7 +39,7 @@
 
 @import 'tailwindcss';
 
-@config '../../tailwind.config.js';
+/* @config '../../tailwind.config.js'; */
 
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
@@ -105,7 +105,7 @@
   }
 
   /* Panel */
-  @apply relative rounded-md bg-white p-5 shadow-xs dark:bg-[#0e1726];
+  @apply relative rounded-md bg-white p-5 shadow-2xs dark:bg-[#0e1726];
 }
 
 @utility navbar-sticky {
@@ -247,7 +247,7 @@
   }
 
   & ul.sub-menu {
-    @apply absolute top-full z-20 hidden min-w-[180px] rounded-xs bg-white p-0 py-2 text-dark shadow-xs dark:bg-[#1b2e4b] dark:text-white-dark;
+    @apply absolute top-full z-20 hidden min-w-[180px] rounded-xs bg-white p-0 py-2 text-dark shadow-2xs dark:bg-[#1b2e4b] dark:text-white-dark;
   }
 
   & ul.sub-menu a {
@@ -581,7 +581,7 @@ hover:text-primary hover:before:bg-primary! ltr:before:mr-2 rtl:before:ml-2 dark
   }
 
   .horizontal-menu &ul {
-    @apply absolute top-full z-20 hidden min-w-[180px] rounded-xs bg-white p-0 py-2 text-dark shadow-xs dark:bg-[#1b2e4b] dark:text-white-dark;
+    @apply absolute top-full z-20 hidden min-w-[180px] rounded-xs bg-white p-0 py-2 text-dark shadow-2xs dark:bg-[#1b2e4b] dark:text-white-dark;
   }
 
   .horizontal-menu &ul a {
@@ -2311,7 +2311,7 @@ hover:text-primary hover:before:bg-primary! ltr:before:mr-2 rtl:before:ml-2 dark
     @apply flex;
   }
   & ul {
-    @apply absolute z-10 mt-1 min-w-[120px] rounded-xs bg-white p-0 py-2 text-black shadow-xs dark:bg-[#1b2e4b] dark:text-white-dark;
+    @apply absolute z-10 mt-1 min-w-[120px] rounded-xs bg-white p-0 py-2 text-black shadow-2xs dark:bg-[#1b2e4b] dark:text-white-dark;
     /* @apply my-1 min-w-[120px] rounded bg-white p-0 py-2 shadow dark:bg-[#1b2e4b]; */
   }
   & ul li > a {
@@ -2411,6 +2411,24 @@ hover:text-primary hover:before:bg-primary! ltr:before:mr-2 rtl:before:ml-2 dark
   }
   &table tbody tr:last-child td {
     @apply border-b-0;
+  }
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
   }
 }
 
