@@ -945,7 +945,7 @@
             <div class="main-content">
                 <!-- start header section -->
                 <header :class="{'dark' : $store.app.semidark && $store.app.menu === 'horizontal'}">
-                    <div class="shadow-xs">
+                    <div class="shadow-2xs">
                         <div class="relative flex w-full items-center bg-white px-5 py-2.5 dark:bg-[#0e1726]">
                             <div class="flex items-center justify-between horizontal-logo ltr:mr-2 rtl:ml-2 lg:hidden">
                                 <a href="index.html" class="flex items-center main-logo shrink-0">
@@ -1151,7 +1151,7 @@
                                         <template x-for="notification in notifications">
                                             <li class="dark:text-white-light/90">
                                                 <div class="flex items-center px-4 py-2 group" @click.self="toggle">
-                                                    <div class="grid rounded-sm place-content-center">
+                                                    <div class="grid rounded-xs place-content-center">
                                                         <div class="relative w-12 h-12">
                                                             <img
                                                                 class="object-cover w-12 h-12 rounded-full"
@@ -1241,7 +1241,7 @@
                                                 </div>
                                                 <div class="ltr:pl-4 rtl:pr-4">
                                                     <h4 class="text-base">
-                                                         جان دو<span class="px-1 text-xs rounded-sm bg-success-light text-success ltr:ml-2 rtl:ml-2">Pro</span>
+                                                         جان دو<span class="px-1 text-xs rounded-xs bg-success-light text-success ltr:ml-2 rtl:ml-2">Pro</span>
                                                     </h4>
                                                     <a
                                                         class="text-black/60 hover:text-primary dark:text-dark-light/60 dark:hover:text-white"
@@ -1720,7 +1720,7 @@
                                         <li>
                                             <a
                                                 href="javascript:;"
-                                                class="flex items-center justify-center rounded-md border border-gray-500/20 p-2.5 shadow-sm hover:text-gray-500/70 dark:border-0 dark:bg-[#191e3a] dark:hover:text-white-dark/70"
+                                                class="flex items-center justify-center rounded-md border border-gray-500/20 p-2.5 shadow-xs hover:text-gray-500/70 dark:border-0 dark:bg-[#191e3a] dark:hover:text-white-dark/70"
                                             >
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5">
                                                     <path
@@ -1738,7 +1738,7 @@
                                         >
                                             <a
                                                 href="javascript:;"
-                                                class="flex items-center justify-center rounded-md border border-gray-500/20 p-2.5 text-primary shadow-sm dark:border-0 dark:bg-[#191e3a]"
+                                                class="flex items-center justify-center rounded-md border border-gray-500/20 p-2.5 text-primary shadow-xs dark:border-0 dark:bg-[#191e3a]"
                                             >
                                                 <svg
                                                     width="24"
@@ -1769,7 +1769,7 @@
                                             class="flex items-center before:relative before:-top-0.5 before:mx-4 before:inline-block before:h-1 before:w-1 before:rounded-full before:bg-primary"
                                         >
                                             <a
-                                                class="flex items-center justify-center rounded-md border border-gray-500/20 p-2.5 shadow-sm hover:text-gray-500/70 dark:border-0 dark:bg-[#191e3a] dark:hover:text-white-dark/70"
+                                                class="flex items-center justify-center rounded-md border border-gray-500/20 p-2.5 shadow-xs hover:text-gray-500/70 dark:border-0 dark:bg-[#191e3a] dark:hover:text-white-dark/70"
                                                 href="javascript:;"
                                             >
                                                 <svg

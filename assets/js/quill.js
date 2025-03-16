@@ -1148,7 +1148,7 @@ var Quill = function () {
       return container;
     }
   }, {
-    key: 'blur-sm',
+    key: 'blur-xs',
     value: function blur() {
       this.selection.setRange(null);
     }

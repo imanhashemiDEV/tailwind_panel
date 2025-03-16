@@ -944,7 +944,7 @@
             <div class="main-content">
                 <!-- start header section -->
                 <header :class="{'dark' : $store.app.semidark && $store.app.menu === 'horizontal'}">
-                    <div class="shadow-xs">
+                    <div class="shadow-2xs">
                         <div class="relative flex w-full items-center bg-white px-5 py-2.5 dark:bg-[#0e1726]">
                             <div class="flex items-center justify-between horizontal-logo ltr:mr-2 rtl:ml-2 lg:hidden">
                                 <a href="index.html" class="flex items-center main-logo shrink-0">
@@ -1150,7 +1150,7 @@
                                         <template x-for="notification in notifications">
                                             <li class="dark:text-white-light/90">
                                                 <div class="flex items-center px-4 py-2 group" @click.self="toggle">
-                                                    <div class="grid rounded-sm place-content-center">
+                                                    <div class="grid rounded-xs place-content-center">
                                                         <div class="relative w-12 h-12">
                                                             <img
                                                                 class="object-cover w-12 h-12 rounded-full"
@@ -1240,7 +1240,7 @@
                                                 </div>
                                                 <div class="ltr:pl-4 rtl:pr-4">
                                                     <h4 class="text-base">
-                                                         جان دو<span class="px-1 text-xs rounded-sm bg-success-light text-success ltr:ml-2 rtl:ml-2">Pro</span>
+                                                         جان دو<span class="px-1 text-xs rounded-xs bg-success-light text-success ltr:ml-2 rtl:ml-2">Pro</span>
                                                     </h4>
                                                     <a
                                                         class="text-black/60 hover:text-primary dark:text-dark-light/60 dark:hover:text-white"
@@ -2253,10 +2253,10 @@
                                                     x-model="form6.firstName"
                                                 />
                                                 <template x-if="isSubmitForm6 && form6.firstName">
-                                                    <span class="rounded-sm bg-[#1abc9c] py-1 px-2 text-white">به نظر خوب میاد!</span>
+                                                    <span class="rounded-xs bg-[#1abc9c] py-1 px-2 text-white">به نظر خوب میاد!</span>
                                                 </template>
                                                 <template x-if="isSubmitForm6 && !form6.firstName">
-                                                    <span class="px-2 py-1 text-white rounded-sm bg-danger">لطفا نام را پر کنید</span>
+                                                    <span class="px-2 py-1 text-white rounded-xs bg-danger">لطفا نام را پر کنید</span>
                                                 </template>
                                             </div>
                                             <div :class="[isSubmitForm6 ? (form6.lastName ? 'has-success' : 'has-error') : '']">
@@ -2269,10 +2269,10 @@
                                                     x-model="form6.lastName"
                                                 />
                                                 <template x-if="isSubmitForm6 && form6.lastName">
-                                                    <span class="rounded-sm bg-[#1abc9c] py-1 px-2 text-white">به نظر خوب میاد!</span>
+                                                    <span class="rounded-xs bg-[#1abc9c] py-1 px-2 text-white">به نظر خوب میاد!</span>
                                                 </template>
                                                 <template x-if="isSubmitForm6 && !form6.lastName">
-                                                    <span class="px-2 py-1 text-white rounded-sm bg-danger"> لطفا نام خانوادگی را پر کنید</span>
+                                                    <span class="px-2 py-1 text-white rounded-xs bg-danger"> لطفا نام خانوادگی را پر کنید</span>
                                                 </template>
                                             </div>
                                             <div :class="[isSubmitForm6 ? (form6.userName ? 'has-success' : 'has-error') : '']">
@@ -2293,10 +2293,10 @@
                                                 </div>
                                                 <div class="mt-2">
                                                     <template x-if="isSubmitForm6 && form6.userName">
-                                                        <span class="rounded-sm bg-[#1abc9c] py-1 px-2 text-white">به نظر خوب میاد!</span>
+                                                        <span class="rounded-xs bg-[#1abc9c] py-1 px-2 text-white">به نظر خوب میاد!</span>
                                                     </template>
                                                     <template x-if="isSubmitForm6 && !form6.userName">
-                                                        <span class="px-2 py-1 text-white rounded-sm bg-danger">لطفا یک نام کاربری انتخاب کنید.</span>
+                                                        <span class="px-2 py-1 text-white rounded-xs bg-danger">لطفا یک نام کاربری انتخاب کنید.</span>
                                                     </template>
                                                 </div>
                                             </div>
@@ -2306,30 +2306,30 @@
                                                 <label for="tlpCity">شهر</label>
                                                 <input id="tlpCity" type="text" placeholder="شهر وارد کنید" class="mb-2 form-input" x-model="form6.city" />
                                                 <template x-if="isSubmitForm6 && form6.city">
-                                                    <span class="rounded-sm bg-[#1abc9c] py-1 px-2 text-white">به نظر خوب میاد!</span>
+                                                    <span class="rounded-xs bg-[#1abc9c] py-1 px-2 text-white">به نظر خوب میاد!</span>
                                                 </template>
                                                 <template x-if="isSubmitForm6 && !form6.city">
-                                                    <span class="px-2 py-1 text-white rounded-sm bg-danger">لطفا یک شهر معتبر ارائه دهید.</span>
+                                                    <span class="px-2 py-1 text-white rounded-xs bg-danger">لطفا یک شهر معتبر ارائه دهید.</span>
                                                 </template>
                                             </div>
                                             <div :class="[isSubmitForm6 ? (form6.state ? 'has-success' : 'has-error') : '']">
                                                 <label for="tlpState">استان</label>
                                                 <input id="tlpState" type="text" placeholder="استان وارد کنید" class="mb-2 form-input" x-model="form6.state" />
                                                 <template x-if="isSubmitForm6 && form6.state">
-                                                    <span class="rounded-sm bg-[#1abc9c] py-1 px-2 text-white">به نظر خوب میاد!</span>
+                                                    <span class="rounded-xs bg-[#1abc9c] py-1 px-2 text-white">به نظر خوب میاد!</span>
                                                 </template>
                                                 <template x-if="isSubmitForm6 && !form6.state">
-                                                    <span class="px-2 py-1 text-white rounded-sm bg-danger">لطفاً یک استان معتبر ارائه دهید.</span>
+                                                    <span class="px-2 py-1 text-white rounded-xs bg-danger">لطفاً یک استان معتبر ارائه دهید.</span>
                                                 </template>
                                             </div>
                                             <div :class="[isSubmitForm6 ? (form6.zip ? 'has-success' : 'has-error') : '']">
                                                 <label for="tlpZip">کدپستی</label>
                                                 <input id="tlpZip" type="text" placeholder="کدپستی وارد کنید" class="mb-2 form-input" x-model="form6.zip" />
                                                 <template x-if="isSubmitForm6 && form6.zip">
-                                                    <span class="rounded-sm bg-[#1abc9c] py-1 px-2 text-white">به نظر خوب میاد!</span>
+                                                    <span class="rounded-xs bg-[#1abc9c] py-1 px-2 text-white">به نظر خوب میاد!</span>
                                                 </template>
                                                 <template x-if="isSubmitForm6 && !form6.zip">
-                                                    <span class="px-2 py-1 text-white rounded-sm bg-danger">لطفا یک فایل فشرده معتبر ارائه دهید.</span>
+                                                    <span class="px-2 py-1 text-white rounded-xs bg-danger">لطفا یک فایل فشرده معتبر ارائه دهید.</span>
                                                 </template>
                                             </div>
                                         </div>
@@ -2340,7 +2340,7 @@
                                             </label>
                                             <template x-if="isSubmitForm6 && !form6.isTerms">
                                                 <div class="mt-2">
-                                                    <span class="px-2 py-1 text-white rounded-sm bg-danger">قبل از ارسال باید موافقت کنید.</span>
+                                                    <span class="px-2 py-1 text-white rounded-xs bg-danger">قبل از ارسال باید موافقت کنید.</span>
                                                 </div>
                                             </template>
                                         </div>

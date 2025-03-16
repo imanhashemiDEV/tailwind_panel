@@ -944,7 +944,7 @@
             <div class="main-content">
                 <!-- start header section -->
                 <header :class="{'dark' : $store.app.semidark && $store.app.menu === 'horizontal'}">
-                    <div class="shadow-xs">
+                    <div class="shadow-2xs">
                         <div class="relative flex w-full items-center bg-white px-5 py-2.5 dark:bg-[#0e1726]">
                             <div class="flex items-center justify-between horizontal-logo ltr:mr-2 rtl:ml-2 lg:hidden">
                                 <a href="index.html" class="flex items-center main-logo shrink-0">
@@ -1150,7 +1150,7 @@
                                         <template x-for="notification in notifications">
                                             <li class="dark:text-white-light/90">
                                                 <div class="flex items-center px-4 py-2 group" @click.self="toggle">
-                                                    <div class="grid rounded-sm place-content-center">
+                                                    <div class="grid rounded-xs place-content-center">
                                                         <div class="relative w-12 h-12">
                                                             <img
                                                                 class="object-cover w-12 h-12 rounded-full"
@@ -1240,7 +1240,7 @@
                                                 </div>
                                                 <div class="ltr:pl-4 rtl:pr-4">
                                                     <h4 class="text-base">
-                                                         جان دو<span class="px-1 text-xs rounded-sm bg-success-light text-success ltr:ml-2 rtl:ml-2">Pro</span>
+                                                         جان دو<span class="px-1 text-xs rounded-xs bg-success-light text-success ltr:ml-2 rtl:ml-2">Pro</span>
                                                     </h4>
                                                     <a
                                                         class="text-black/60 hover:text-primary dark:text-dark-light/60 dark:hover:text-white"
@@ -1516,7 +1516,7 @@
                                                 <h6>درآمد</h6>
                                                 <p class="ltr:ml-auto rtl:mr-auto">$92,600</p>
                                             </div>
-                                            <div class="h-2 rounded-full bg-dark-light shadow-sm dark:bg-[#1b2e4b]">
+                                            <div class="h-2 rounded-full bg-dark-light shadow-xs dark:bg-[#1b2e4b]">
                                                 <div class="h-full w-11/12 rounded-full bg-linear-to-r from-[#7579ff] to-[#b224ef]"></div>
                                             </div>
                                         </div>
@@ -1556,7 +1556,7 @@
                                                 <h6>سود</h6>
                                                 <p class="ltr:ml-auto rtl:mr-auto">$37,515</p>
                                             </div>
-                                            <div class="h-2 w-full rounded-full bg-dark-light shadow-sm dark:bg-[#1b2e4b]">
+                                            <div class="h-2 w-full rounded-full bg-dark-light shadow-xs dark:bg-[#1b2e4b]">
                                                 <div class="h-full w-full rounded-full bg-linear-to-r from-[#3cba92] to-[#0ba360]" style="width: 65%"></div>
                                             </div>
                                         </div>
@@ -1583,7 +1583,7 @@
                                                 <h6>هزینه ها</h6>
                                                 <p class="ltr:ml-auto rtl:mr-auto">$55,085</p>
                                             </div>
-                                            <div class="h-2 w-full rounded-full bg-dark-light shadow-sm dark:bg-[#1b2e4b]">
+                                            <div class="h-2 w-full rounded-full bg-dark-light shadow-xs dark:bg-[#1b2e4b]">
                                                 <div class="h-full w-full rounded-full bg-linear-to-r from-[#f09819] to-[#ff5858]" style="width: 80%"></div>
                                             </div>
                                         </div>
@@ -1793,7 +1793,7 @@
                                     <a href="javascript:;" class="flex items-center justify-center p-4 font-semibold group hover:text-primary">
                                         مشاهده همه
                                         <svg
-                                            class="w-4 h-4 transition duration-300 group-hover:translate-x-1 ltr:ml-1 rtl:mr-1 rtl:rotate-180 group-hover:rtl:-translate-x-1"
+                                            class="w-4 h-4 transition duration-300 group-hover:translate-x-1 ltr:ml-1 rtl:mr-1 rtl:rotate-180 rtl:group-hover:-translate-x-1"
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             xmlns="http://www.w3.org/2000/svg"
@@ -1994,7 +1994,7 @@
                                     </div>
                                 </div>
                                 <div class="grid grid-cols-2 gap-2 px-8 -mt-12">
-                                    <div class="rounded-md bg-white px-4 py-2.5 shadow-sm dark:bg-[#060818]">
+                                    <div class="rounded-md bg-white px-4 py-2.5 shadow-xs dark:bg-[#060818]">
                                         <span class="flex items-center justify-between mb-4 dark:text-white"
                                             >دریافت شد
 
@@ -2014,7 +2014,7 @@
                                             $97.99
                                         </div>
                                     </div>
-                                    <div class="rounded-md bg-white px-4 py-2.5 shadow-sm dark:bg-[#060818]">
+                                    <div class="rounded-md bg-white px-4 py-2.5 shadow-xs dark:bg-[#060818]">
                                         <span class="flex items-center justify-between mb-4 dark:text-white"
                                             >صرف شده
 
@@ -2500,14 +2500,14 @@
 
                                     <div class="relative text-xl whitespace-nowrap">
                                         $ 41,741.42
-                                        <span class="mt-1 table rounded-sm bg-[#4361ee] p-1 text-xs text-[#d3d3d3] ltr:ml-auto rtl:mr-auto">+ 2453</span>
+                                        <span class="mt-1 table rounded-xs bg-[#4361ee] p-1 text-xs text-[#d3d3d3] ltr:ml-auto rtl:mr-auto">+ 2453</span>
                                     </div>
                                 </div>
                                 <div class="z-10 flex items-center justify-between">
                                     <div class="flex items-center justify-between">
                                         <a
                                             href="javascript:;"
-                                            class="place-content-center rounded-sm p-1 text-white-light shadow-[0_0_2px_0_#bfc9d4] hover:bg-[#1937cc] ltr:mr-2 rtl:ml-2"
+                                            class="place-content-center rounded-xs p-1 text-white-light shadow-[0_0_2px_0_#bfc9d4] hover:bg-[#1937cc] ltr:mr-2 rtl:ml-2"
                                         >
                                             <svg
                                                 class="w-5 h-5"
@@ -2524,7 +2524,7 @@
                                         </a>
                                         <a
                                             href="javascript:;"
-                                            class="grid place-content-center rounded-sm p-1 text-white-light shadow-[0_0_2px_0_#bfc9d4] hover:bg-[#1937cc]"
+                                            class="grid place-content-center rounded-xs p-1 text-white-light shadow-[0_0_2px_0_#bfc9d4] hover:bg-[#1937cc]"
                                         >
                                             <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -2538,7 +2538,7 @@
                                             </svg>
                                         </a>
                                     </div>
-                                    <a href="javascript:;" class="z-10 rounded-sm p-1 text-white-light shadow-[0_0_2px_0_#bfc9d4] hover:bg-[#4361ee]"> Upgrade </a>
+                                    <a href="javascript:;" class="z-10 rounded-xs p-1 text-white-light shadow-[0_0_2px_0_#bfc9d4] hover:bg-[#4361ee]"> Upgrade </a>
                                 </div>
                             </div>
                         </div>
@@ -2609,7 +2609,7 @@
                                                 class="relative z-10 before:absolute before:top-10 before:left-4 before:h-[calc(100%-24px)] before:w-[2px] before:bg-white-dark/30 ltr:mr-2 rtl:ml-2"
                                             >
                                                 <div
-                                                    class="flex items-center justify-center w-8 h-8 text-white rounded-full shadow-sm bg-secondary shadow-secondary"
+                                                    class="flex items-center justify-center w-8 h-8 text-white rounded-full shadow-xs bg-secondary shadow-secondary"
                                                 >
                                                     <svg
                                                         class="w-4 h-4"
@@ -3237,7 +3237,7 @@
                                             3 روز مانده
                                         </div>
                                         <div
-                                            class="flex items-center justify-center group-hover:-space-x-2 rtl:space-x-reverse group-hover:rtl:space-x-reverse"
+                                            class="flex items-center justify-center group-hover:-space-x-2 rtl:space-x-reverse rtl:group-hover:space-x-reverse"
                                         >
                                             <span
                                                 class="flex h-9 w-9 items-center justify-center rounded-full bg-[#bfc9d4] font-semibold text-white opacity-0 transition-all duration-300 group-hover:opacity-100 dark:bg-dark"
