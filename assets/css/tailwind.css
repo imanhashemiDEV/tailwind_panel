@@ -37,7 +37,9 @@
 /* dragndrop */
 @import 'dragndrop.css';
 
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer components {
     
