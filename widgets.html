@@ -24,7 +24,7 @@
         <div x-cloak class="fixed inset-0 z-50 bg-[black]/60 lg:hidden" :class="{'hidden' : !$store.app.sidebar}" @click="$store.app.toggleSidebar()"></div>
 
         <!-- screen loader -->
-        <div class="screen_loader animate__animated fixed inset-0 z-[60] grid place-content-center bg-[#fafafa] dark:bg-[#060818]">
+        <div class="screen_loader animate__animated fixed inset-0 z-60 grid place-content-center bg-[#fafafa] dark:bg-[#060818]">
             <svg width="64" height="64" viewBox="0 0 135 135" xmlns="http://www.w3.org/2000/svg" fill="#4361ee">
                 <path
                     d="M67.447 58c5.523 0 10-4.477 10-10s-4.477-10-10-10-10 4.477-10 10 4.477 10 10 10zm9.448 9.447c0 5.523 4.477 10 10 10 5.522 0 10-4.477 10-10s-4.478-10-10-10c-5.523 0-10 4.477-10 10zm-9.448 9.448c-5.523 0-10 4.477-10 10 0 5.522 4.477 10 10 10s10-4.478 10-10c0-5.523-4.477-10-10-10zM58 67.447c0-5.523-4.477-10-10-10s-10 4.477-10 10 4.477 10 10 10 10-4.477 10-10z"
@@ -67,14 +67,14 @@
         <!-- start theme customizer section -->
         <div x-data="customizer">
             <div
-                class="fixed inset-0 z-[51] hidden bg-[black]/60 px-4 transition-[display]"
-                :class="{'!block': showCustomizer}"
+                class="fixed inset-0 z-51 hidden bg-[black]/60 px-4 transition-[display]"
+                :class="{'block!': showCustomizer}"
                 @click="showCustomizer = false"
             ></div>
 
             <nav
-                class="fixed top-0 bottom-0 z-[51] w-full max-w-[400px] bg-white p-4 shadow-[5px_0_25px_0_rgba(94,92,154,0.1)] transition-[right] duration-300 ltr:-right-[400px] rtl:-left-[400px] dark:bg-[#0e1726]"
-                :class="{'ltr:!right-0 rtl:!left-0' : showCustomizer}"
+                class="fixed top-0 bottom-0 z-51 w-full max-w-[400px] bg-white p-4 shadow-[5px_0_25px_0_rgba(94,92,154,0.1)] transition-[right] duration-300 ltr:-right-[400px] rtl:-left-[400px] dark:bg-[#0e1726]"
+                :class="{'ltr:right-0! rtl:left-0!' : showCustomizer}"
             >
                 <a
                     href="javascript:;"
@@ -405,7 +405,7 @@
                                 >
                                     <div class="flex items-center">
                                         <svg
-                                            class="group-hover:!text-primary"
+                                            class="group-hover:text-primary!"
                                             width="20"
                                             height="20"
                                             viewBox="0 0 24 24"
@@ -425,7 +425,7 @@
 
                                         <span class="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">داشبورد</span>
                                     </div>
-                                    <div class="rtl:rotate-180" :class="{'!rotate-90' : activeDropdown === 'dashboard'}">
+                                    <div class="rtl:rotate-180" :class="{'rotate-90!' : activeDropdown === 'dashboard'}">
                                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M9 5L15 12L9 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
@@ -464,7 +464,7 @@
                                 >
                                     <div class="flex items-center">
                                         <svg
-                                            class="group-hover:!text-primary"
+                                            class="group-hover:text-primary!"
                                             width="20"
                                             height="20"
                                             viewBox="0 0 24 24"
@@ -488,7 +488,7 @@
                                         </svg>
                                         <span class="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">کامپوننت ها</span>
                                     </div>
-                                    <div class="rtl:rotate-180" :class="{'!rotate-90' : activeDropdown === 'components'}">
+                                    <div class="rtl:rotate-180" :class="{'rotate-90!' : activeDropdown === 'components'}">
                                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M9 5L15 12L9 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
@@ -533,7 +533,7 @@
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             xmlns="http://www.w3.org/2000/svg"
-                                            class="group-hover:!text-primary"
+                                            class="group-hover:text-primary!"
                                         >
                                             <path
                                                 fill-rule="evenodd"
@@ -549,7 +549,7 @@
                                         </svg>
                                         <span class="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">عناصر</span>
                                     </div>
-                                    <div class="rtl:rotate-180" :class="{'!rotate-90' : activeDropdown === 'elements'}">
+                                    <div class="rtl:rotate-180" :class="{'rotate-90!' : activeDropdown === 'elements'}">
                                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M9 5L15 12L9 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
@@ -608,7 +608,7 @@
                                 <a href="charts.html" class="nav-link group">
                                     <div class="flex items-center">
                                         <svg
-                                            class="group-hover:!text-primary"
+                                            class="group-hover:text-primary!"
                                             width="20"
                                             height="20"
                                             viewBox="0 0 24 24"
@@ -632,7 +632,7 @@
                             <li class="nav-item">
                                 <a href="apps-chat.html" class="group">
                                     <div class="flex items-center">
-                                        <svg class="group-hover:!text-primary" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg class="group-hover:text-primary!" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M10.4036 22.4797L10.6787 22.015C11.1195 21.2703 11.3399 20.8979 11.691 20.6902C12.0422 20.4825 12.5001 20.4678 13.4161 20.4385C14.275 20.4111 14.8523 20.3361 15.3458 20.1317C16.385 19.7012 17.2106 18.8756 17.641 17.8365C17.9639 17.0571 17.9639 16.0691 17.9639 14.093V13.2448C17.9639 10.4683 17.9639 9.08006 17.3389 8.06023C16.9892 7.48958 16.5094 7.0098 15.9388 6.66011C14.919 6.03516 13.5307 6.03516 10.7542 6.03516H8.20964C5.43314 6.03516 4.04489 6.03516 3.02507 6.66011C2.45442 7.0098 1.97464 7.48958 1.62495 8.06023C1 9.08006 1 10.4683 1 13.2448V14.093C1 16.0691 1 17.0571 1.32282 17.8365C1.75326 18.8756 2.57886 19.7012 3.61802 20.1317C4.11158 20.3361 4.68882 20.4111 5.5477 20.4385C6.46368 20.4678 6.92167 20.4825 7.27278 20.6902C7.6239 20.8979 7.84431 21.2703 8.28514 22.015L8.5602 22.4797C8.97002 23.1721 9.9938 23.1721 10.4036 22.4797ZM13.1928 14.5171C13.7783 14.5171 14.253 14.0424 14.253 13.4568C14.253 12.8713 13.7783 12.3966 13.1928 12.3966C12.6072 12.3966 12.1325 12.8713 12.1325 13.4568C12.1325 14.0424 12.6072 14.5171 13.1928 14.5171ZM10.5422 13.4568C10.5422 14.0424 10.0675 14.5171 9.48193 14.5171C8.89637 14.5171 8.42169 14.0424 8.42169 13.4568C8.42169 12.8713 8.89637 12.3966 9.48193 12.3966C10.0675 12.3966 10.5422 12.8713 10.5422 13.4568ZM5.77108 14.5171C6.35664 14.5171 6.83133 14.0424 6.83133 13.4568C6.83133 12.8713 6.35664 12.3966 5.77108 12.3966C5.18553 12.3966 4.71084 12.8713 4.71084 13.4568C4.71084 14.0424 5.18553 14.5171 5.77108 14.5171Z" fill="currentColor"></path>
                                             <path opacity="0.5" d="M15.486 1C16.7529 0.999992 17.7603 0.999986 18.5683 1.07681C19.3967 1.15558 20.0972 1.32069 20.7212 1.70307C21.3632 2.09648 21.9029 2.63623 22.2963 3.27821C22.6787 3.90219 22.8438 4.60265 22.9226 5.43112C22.9994 6.23907 22.9994 7.24658 22.9994 8.51343V9.37869C22.9994 10.2803 22.9994 10.9975 22.9597 11.579C22.9191 12.174 22.8344 12.6848 22.6362 13.1632C22.152 14.3323 21.2232 15.2611 20.0541 15.7453C20.0249 15.7574 19.9955 15.7691 19.966 15.7804C19.8249 15.8343 19.7039 15.8806 19.5978 15.915H17.9477C17.9639 15.416 17.9639 14.8217 17.9639 14.093V13.2448C17.9639 10.4683 17.9639 9.08006 17.3389 8.06023C16.9892 7.48958 16.5094 7.0098 15.9388 6.66011C14.919 6.03516 13.5307 6.03516 10.7542 6.03516H8.20964C7.22423 6.03516 6.41369 6.03516 5.73242 6.06309V4.4127C5.76513 4.29934 5.80995 4.16941 5.86255 4.0169C5.95202 3.75751 6.06509 3.51219 6.20848 3.27821C6.60188 2.63623 7.14163 2.09648 7.78361 1.70307C8.40759 1.32069 9.10805 1.15558 9.93651 1.07681C10.7445 0.999986 11.7519 0.999992 13.0188 1H15.486Z" fill="currentColor"></path>
                                         </svg>
@@ -644,7 +644,7 @@
                                 <a href="widgets.html" class="nav-link group">
                                     <div class="flex items-center">
                                         <svg
-                                            class="group-hover:!text-primary"
+                                            class="group-hover:text-primary!"
                                             width="20"
                                             height="20"
                                             viewBox="0 0 24 24"
@@ -679,7 +679,7 @@
                                 <a href="font-icons.html" class="nav-link group">
                                     <div class="flex items-center">
                                         <svg
-                                            class="group-hover:!text-primary"
+                                            class="group-hover:text-primary!"
                                             width="20"
                                             height="20"
                                             viewBox="0 0 24 24"
@@ -707,7 +707,7 @@
                                 <a href="tables.html" class="nav-link group">
                                     <div class="flex items-center">
                                         <svg
-                                            class="group-hover:!text-primary"
+                                            class="group-hover:text-primary!"
                                             width="20"
                                             height="20"
                                             viewBox="0 0 24 24"
@@ -746,7 +746,7 @@
                                 >
                                     <div class="flex items-center">
                                         <svg
-                                            class="group-hover:!text-primary"
+                                            class="group-hover:text-primary!"
                                             width="20"
                                             height="20"
                                             viewBox="0 0 24 24"
@@ -775,7 +775,7 @@
                                         </svg>
                                         <span class="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">فرم ها</span>
                                     </div>
-                                    <div class="rtl:rotate-180" :class="{'!rotate-90' : activeDropdown === 'forms'}">
+                                    <div class="rtl:rotate-180" :class="{'rotate-90!' : activeDropdown === 'forms'}">
                                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M9 5L15 12L9 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
@@ -832,7 +832,7 @@
                                 >
                                     <div class="flex items-center">
                                         <svg
-                                            class="group-hover:!text-primary"
+                                            class="group-hover:text-primary!"
                                             width="20"
                                             height="20"
                                             viewBox="0 0 24 24"
@@ -846,7 +846,7 @@
                                         </svg>
                                         <span class="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">کاربران</span>
                                     </div>
-                                    <div class="rtl:rotate-180" :class="{'!rotate-90' : activeDropdown === 'users'}">
+                                    <div class="rtl:rotate-180" :class="{'rotate-90!' : activeDropdown === 'users'}">
                                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M9 5L15 12L9 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
@@ -870,7 +870,7 @@
                                 >
                                     <div class="flex items-center">
                                         <svg
-                                            class="group-hover:!text-primary"
+                                            class="group-hover:text-primary!"
                                             width="20"
                                             height="20"
                                             viewBox="0 0 24 24"
@@ -901,7 +901,7 @@
                                         </svg>
                                         <span class="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">احراز هویت</span>
                                     </div>
-                                    <div class="rtl:rotate-180" :class="{'!rotate-90' : activeDropdown === 'authentication'}">
+                                    <div class="rtl:rotate-180" :class="{'rotate-90!' : activeDropdown === 'authentication'}">
                                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M9 5L15 12L9 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
@@ -944,7 +944,7 @@
             <div class="main-content">
                 <!-- start header section -->
                 <header :class="{'dark' : $store.app.semidark && $store.app.menu === 'horizontal'}">
-                    <div class="shadow-sm">
+                    <div class="shadow-xs">
                         <div class="relative flex w-full items-center bg-white px-5 py-2.5 dark:bg-[#0e1726]">
                             <div class="flex items-center justify-between horizontal-logo ltr:mr-2 rtl:ml-2 lg:hidden">
                                 <a href="index.html" class="flex items-center main-logo shrink-0">
@@ -966,18 +966,18 @@
                            
                             <div
                                 x-data="header"
-                                class="flex items-center space-x-1.5 ltr:ml-auto rtl:mr-auto rtl:space-x-reverse dark:text-[#d0d2d6] sm:flex-1 ltr:sm:ml-0 sm:rtl:mr-0 lg:space-x-2"
+                                class="flex items-center space-x-1.5 ltr:ml-auto rtl:mr-auto rtl:space-x-reverse dark:text-[#d0d2d6] sm:flex-1 sm:ltr:ml-0 sm:rtl:mr-0 lg:space-x-2"
                             >
                                 <div class="sm:ltr:mr-auto sm:rtl:ml-auto" x-data="{ search: false }" @click.outside="search = false">
                                     <form
                                         class="absolute inset-x-0 z-10 hidden mx-4 -translate-y-1/2 top-1/2 sm:relative sm:top-0 sm:mx-0 sm:block sm:translate-y-0"
-                                        :class="{'!block' : search}"
+                                        :class="{'block!' : search}"
                                         @submit.prevent="search = false"
                                     >
                                         <div class="relative">
                                             <input
                                                 type="text"
-                                                class="bg-gray-100 peer form-input placeholder:tracking-widest ltr:pl-9 ltr:pr-9 rtl:pr-9 rtl:pl-9 sm:bg-transparent ltr:sm:pr-4 rtl:sm:pl-4"
+                                                class="bg-gray-100 peer form-input placeholder:tracking-widest ltr:pl-9 ltr:pr-9 rtl:pr-9 rtl:pl-9 sm:bg-transparent sm:ltr:pr-4 sm:rtl:pl-4"
                                                 placeholder="جستجو"
                                             />
                                             <button
@@ -1137,10 +1137,10 @@
                                         x-show="open"
                                         x-transition
                                         x-transition.duration.300ms
-                                        class="top-11 w-[300px] divide-y !py-0 text-dark ltr:-right-2 rtl:-left-2 dark:divide-white/10 dark:text-white-dark sm:w-[350px]"
+                                        class="top-11 w-[300px] divide-y py-0! text-dark ltr:-right-2 rtl:-left-2 dark:divide-white/10 dark:text-white-dark sm:w-[350px]"
                                     >
                                         <li>
-                                            <div class="flex items-center justify-between px-4 py-2 font-semibold hover:!bg-transparent">
+                                            <div class="flex items-center justify-between px-4 py-2 font-semibold hover:bg-transparent!">
                                                 <h4 class="text-lg">نوتیفیکیشن</h4>
                                                 <template x-if="notifications.length">
                                                     <span class="badge bg-primary/80" x-text="notifications.length + 'New'"></span>
@@ -1150,7 +1150,7 @@
                                         <template x-for="notification in notifications">
                                             <li class="dark:text-white-light/90">
                                                 <div class="flex items-center px-4 py-2 group" @click.self="toggle">
-                                                    <div class="grid rounded place-content-center">
+                                                    <div class="grid rounded-sm place-content-center">
                                                         <div class="relative w-12 h-12">
                                                             <img
                                                                 class="object-cover w-12 h-12 rounded-full"
@@ -1193,7 +1193,7 @@
                                         </template>
                                         <template x-if="!notifications.length">
                                             <li>
-                                                <div class="!grid min-h-[200px] place-content-center text-lg hover:!bg-transparent">
+                                                <div class="grid! min-h-[200px] place-content-center text-lg hover:bg-transparent!">
                                                     <div class="mx-auto mb-4 rounded-full text-primary ring-4 ring-primary/30">
                                                         <svg width="40" height="40" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <path
@@ -1217,7 +1217,7 @@
                                         </template>
                                     </ul>
                                 </div>
-                                <div class="flex-shrink-0 dropdown" x-data="dropdown" @click.outside="open = false">
+                                <div class="shrink-0 dropdown" x-data="dropdown" @click.outside="open = false">
                                     <a href="javascript:;" class="relative group" @click="toggle()">
                                         <span
                                             ><img
@@ -1231,7 +1231,7 @@
                                         x-show="open"
                                         x-transition
                                         x-transition.duration.300ms
-                                        class="top-11 w-[230px] !py-0 font-semibold text-dark ltr:right-0 rtl:left-0 dark:text-white-dark dark:text-white-light/90"
+                                        class="top-11 w-[230px] py-0! font-semibold text-dark ltr:right-0 rtl:left-0 dark:text-white-dark dark:text-white-light/90"
                                     >
                                         <li>
                                             <div class="flex items-center px-4 py-4">
@@ -1240,7 +1240,7 @@
                                                 </div>
                                                 <div class="ltr:pl-4 rtl:pr-4">
                                                     <h4 class="text-base">
-                                                         جان دو<span class="px-1 text-xs rounded bg-success-light text-success ltr:ml-2 rtl:ml-2">Pro</span>
+                                                         جان دو<span class="px-1 text-xs rounded-sm bg-success-light text-success ltr:ml-2 rtl:ml-2">Pro</span>
                                                     </h4>
                                                     <a
                                                         class="text-black/60 hover:text-primary dark:text-dark-light/60 dark:hover:text-white"
@@ -1338,7 +1338,7 @@
                                             >
                                         </li>
                                         <li class="border-t border-white-light dark:border-white-light/10">
-                                            <a href="auth-boxed-signin.html" class="!py-3 text-danger" @click="toggle">
+                                            <a href="auth-boxed-signin.html" class="py-3! text-danger" @click="toggle">
                                                 <svg
                                                     class="h-4.5 w-4.5 rotate-90 ltr:mr-2 rtl:ml-2"
                                                     width="18"
@@ -1385,7 +1385,7 @@
                                     <div x-data="dropdown" @click.outside="open = false" class="dropdown ltr:ml-auto rtl:mr-auto">
                                         <a href="javascript:;" @click="toggle">
                                             <svg
-                                                class="h-5 w-5 text-black/70 hover:!text-primary dark:text-white/70"
+                                                class="h-5 w-5 text-black/70 hover:text-primary! dark:text-white/70"
                                                 viewBox="0 0 24 24"
                                                 fill="none"
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -1408,7 +1408,7 @@
                                         <!-- loader -->
                                         <div class="grid min-h-[325px] place-content-center bg-white-light/30 dark:bg-dark dark:bg-opacity-[0.08]">
                                             <span
-                                                class="inline-flex h-5 w-5 animate-spin rounded-full border-2 border-black !border-l-transparent dark:border-white"
+                                                class="inline-flex h-5 w-5 animate-spin rounded-full border-2 border-black border-l-transparent! dark:border-white"
                                             ></span>
                                         </div>
                                     </div>
@@ -1424,7 +1424,7 @@
                                         <!-- loader -->
                                         <div class="grid min-h-[353px] place-content-center bg-white-light/30 dark:bg-dark dark:bg-opacity-[0.08]">
                                             <span
-                                                class="inline-flex h-5 w-5 animate-spin rounded-full border-2 border-black !border-l-transparent dark:border-white"
+                                                class="inline-flex h-5 w-5 animate-spin rounded-full border-2 border-black border-l-transparent! dark:border-white"
                                             ></span>
                                         </div>
                                     </div>
@@ -1459,7 +1459,7 @@
                                         <!-- loader -->
                                         <div class="grid min-h-[175px] place-content-center bg-white-light/30 dark:bg-dark dark:bg-opacity-[0.08]">
                                             <span
-                                                class="inline-flex h-5 w-5 animate-spin rounded-full border-2 border-black !border-l-transparent dark:border-white"
+                                                class="inline-flex h-5 w-5 animate-spin rounded-full border-2 border-black border-l-transparent! dark:border-white"
                                             ></span>
                                         </div>
                                     </div>
@@ -1472,7 +1472,7 @@
                                     <div x-data="dropdown" @click.outside="open = false" class="dropdown ltr:ml-auto rtl:mr-auto">
                                         <a href="javascript:;" @click="toggle">
                                             <svg
-                                                class="h-5 w-5 text-black/70 hover:!text-primary dark:text-white/70"
+                                                class="h-5 w-5 text-black/70 hover:text-primary! dark:text-white/70"
                                                 viewBox="0 0 24 24"
                                                 fill="none"
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -1516,8 +1516,8 @@
                                                 <h6>درآمد</h6>
                                                 <p class="ltr:ml-auto rtl:mr-auto">$92,600</p>
                                             </div>
-                                            <div class="h-2 rounded-full bg-dark-light shadow dark:bg-[#1b2e4b]">
-                                                <div class="h-full w-11/12 rounded-full bg-gradient-to-r from-[#7579ff] to-[#b224ef]"></div>
+                                            <div class="h-2 rounded-full bg-dark-light shadow-sm dark:bg-[#1b2e4b]">
+                                                <div class="h-full w-11/12 rounded-full bg-linear-to-r from-[#7579ff] to-[#b224ef]"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -1556,8 +1556,8 @@
                                                 <h6>سود</h6>
                                                 <p class="ltr:ml-auto rtl:mr-auto">$37,515</p>
                                             </div>
-                                            <div class="h-2 w-full rounded-full bg-dark-light shadow dark:bg-[#1b2e4b]">
-                                                <div class="h-full w-full rounded-full bg-gradient-to-r from-[#3cba92] to-[#0ba360]" style="width: 65%"></div>
+                                            <div class="h-2 w-full rounded-full bg-dark-light shadow-sm dark:bg-[#1b2e4b]">
+                                                <div class="h-full w-full rounded-full bg-linear-to-r from-[#3cba92] to-[#0ba360]" style="width: 65%"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -1583,8 +1583,8 @@
                                                 <h6>هزینه ها</h6>
                                                 <p class="ltr:ml-auto rtl:mr-auto">$55,085</p>
                                             </div>
-                                            <div class="h-2 w-full rounded-full bg-dark-light shadow dark:bg-[#1b2e4b]">
-                                                <div class="h-full w-full rounded-full bg-gradient-to-r from-[#f09819] to-[#ff5858]" style="width: 80%"></div>
+                                            <div class="h-2 w-full rounded-full bg-dark-light shadow-sm dark:bg-[#1b2e4b]">
+                                                <div class="h-full w-full rounded-full bg-linear-to-r from-[#f09819] to-[#ff5858]" style="width: 80%"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -1634,7 +1634,7 @@
                                     <!-- loader -->
                                     <div class="grid min-h-[290px] place-content-center bg-white-light/30 dark:bg-dark dark:bg-opacity-[0.08]">
                                         <span
-                                            class="inline-flex h-5 w-5 animate-spin rounded-full border-2 border-black !border-l-transparent dark:border-white"
+                                            class="inline-flex h-5 w-5 animate-spin rounded-full border-2 border-black border-l-transparent! dark:border-white"
                                         ></span>
                                     </div>
                                 </div>
@@ -1793,7 +1793,7 @@
                                     <a href="javascript:;" class="flex items-center justify-center p-4 font-semibold group hover:text-primary">
                                         مشاهده همه
                                         <svg
-                                            class="w-4 h-4 transition duration-300 group-hover:translate-x-1 ltr:ml-1 rtl:mr-1 rtl:rotate-180 rtl:group-hover:-translate-x-1"
+                                            class="w-4 h-4 transition duration-300 group-hover:translate-x-1 ltr:ml-1 rtl:mr-1 rtl:rotate-180 group-hover:rtl:-translate-x-1"
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             xmlns="http://www.w3.org/2000/svg"
@@ -1816,7 +1816,7 @@
                                     <div x-data="dropdown" @click.outside="open = false" class="dropdown">
                                         <a href="javascript:;" @click="toggle">
                                             <svg
-                                                class="h-5 w-5 text-black/70 hover:!text-primary dark:text-white/70"
+                                                class="h-5 w-5 text-black/70 hover:text-primary! dark:text-white/70"
                                                 viewBox="0 0 24 24"
                                                 fill="none"
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -1960,7 +1960,7 @@
                             </div>
 
                             <div class="h-full p-0 overflow-hidden border-0 panel">
-                                <div class="min-h-[190px] bg-gradient-to-r from-[#4361ee] to-[#160f6b] p-6">
+                                <div class="min-h-[190px] bg-linear-to-r from-[#4361ee] to-[#160f6b] p-6">
                                     <div class="flex items-center justify-between mb-6">
                                         <div class="flex items-center p-1 font-semibold text-white rounded-full bg-black/50 ltr:pr-3 rtl:pl-3">
                                             <img
@@ -1994,7 +1994,7 @@
                                     </div>
                                 </div>
                                 <div class="grid grid-cols-2 gap-2 px-8 -mt-12">
-                                    <div class="rounded-md bg-white px-4 py-2.5 shadow dark:bg-[#060818]">
+                                    <div class="rounded-md bg-white px-4 py-2.5 shadow-sm dark:bg-[#060818]">
                                         <span class="flex items-center justify-between mb-4 dark:text-white"
                                             >دریافت شد
 
@@ -2014,7 +2014,7 @@
                                             $97.99
                                         </div>
                                     </div>
-                                    <div class="rounded-md bg-white px-4 py-2.5 shadow dark:bg-[#060818]">
+                                    <div class="rounded-md bg-white px-4 py-2.5 shadow-sm dark:bg-[#060818]">
                                         <span class="flex items-center justify-between mb-4 dark:text-white"
                                             >صرف شده
 
@@ -2397,7 +2397,7 @@
                                     <div x-data="dropdown" @click.outside="open = false" class="dropdown">
                                         <a href="javascript:;" @click="toggle">
                                             <svg
-                                                class="h-5 w-5 text-black/70 hover:!text-primary dark:text-white/70"
+                                                class="h-5 w-5 text-black/70 hover:text-primary! dark:text-white/70"
                                                 viewBox="0 0 24 24"
                                                 fill="none"
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -2440,7 +2440,7 @@
                                     <div x-data="dropdown" @click.outside="open = false" class="dropdown">
                                         <a href="javascript:;" @click="toggle">
                                             <svg
-                                                class="h-5 w-5 text-black/70 hover:!text-primary dark:text-white/70"
+                                                class="h-5 w-5 text-black/70 hover:text-primary! dark:text-white/70"
                                                 viewBox="0 0 24 24"
                                                 fill="none"
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -2483,7 +2483,7 @@
                                 <div class="flex items-center justify-between">
                                     <div class="w-full h-5 p-1 overflow-hidden rounded-full bg-dark-light shadow-3xl dark:bg-dark-light/10 dark:shadow-none">
                                         <div
-                                            class="relative h-full w-full rounded-full bg-gradient-to-r from-[#4361ee] to-[#805dca] before:absolute before:inset-y-0 before:m-auto before:h-2 before:w-2 before:rounded-full before:bg-white ltr:before:right-0.5 rtl:before:left-0.5"
+                                            class="relative h-full w-full rounded-full bg-linear-to-r from-[#4361ee] to-[#805dca] before:absolute before:inset-y-0 before:m-auto before:h-2 before:w-2 before:rounded-full before:bg-white ltr:before:right-0.5 rtl:before:left-0.5"
                                             style="width: 65%"
                                         ></div>
                                     </div>
@@ -2495,19 +2495,19 @@
                                 class="panel grid h-full grid-cols-1 content-between overflow-hidden before:absolute before:-right-44 before:top-0 before:bottom-0 before:m-auto before:h-96 before:w-96 before:rounded-full before:bg-[#1937cc]"
                                 style="background: linear-gradient(0deg, #00c6fb -227%, #005bea) !important"
                             >
-                                <div class="z-[7] mb-16 flex items-start justify-between text-white-light">
+                                <div class="z-7 mb-16 flex items-start justify-between text-white-light">
                                     <h5 class="text-lg font-semibold">کل موجودی</h5>
 
                                     <div class="relative text-xl whitespace-nowrap">
                                         $ 41,741.42
-                                        <span class="mt-1 table rounded bg-[#4361ee] p-1 text-xs text-[#d3d3d3] ltr:ml-auto rtl:mr-auto">+ 2453</span>
+                                        <span class="mt-1 table rounded-sm bg-[#4361ee] p-1 text-xs text-[#d3d3d3] ltr:ml-auto rtl:mr-auto">+ 2453</span>
                                     </div>
                                 </div>
                                 <div class="z-10 flex items-center justify-between">
                                     <div class="flex items-center justify-between">
                                         <a
                                             href="javascript:;"
-                                            class="place-content-center rounded p-1 text-white-light shadow-[0_0_2px_0_#bfc9d4] hover:bg-[#1937cc] ltr:mr-2 rtl:ml-2"
+                                            class="place-content-center rounded-sm p-1 text-white-light shadow-[0_0_2px_0_#bfc9d4] hover:bg-[#1937cc] ltr:mr-2 rtl:ml-2"
                                         >
                                             <svg
                                                 class="w-5 h-5"
@@ -2524,7 +2524,7 @@
                                         </a>
                                         <a
                                             href="javascript:;"
-                                            class="grid place-content-center rounded p-1 text-white-light shadow-[0_0_2px_0_#bfc9d4] hover:bg-[#1937cc]"
+                                            class="grid place-content-center rounded-sm p-1 text-white-light shadow-[0_0_2px_0_#bfc9d4] hover:bg-[#1937cc]"
                                         >
                                             <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -2538,7 +2538,7 @@
                                             </svg>
                                         </a>
                                     </div>
-                                    <a href="javascript:;" class="z-10 rounded p-1 text-white-light shadow-[0_0_2px_0_#bfc9d4] hover:bg-[#4361ee]"> Upgrade </a>
+                                    <a href="javascript:;" class="z-10 rounded-sm p-1 text-white-light shadow-[0_0_2px_0_#bfc9d4] hover:bg-[#4361ee]"> Upgrade </a>
                                 </div>
                             </div>
                         </div>
@@ -2550,7 +2550,7 @@
                                     <div x-data="dropdown" @click.outside="open = false" class="dropdown">
                                         <a href="javascript:;" @click="toggle">
                                             <svg
-                                                class="h-5 w-5 text-black/70 hover:!text-primary dark:text-white/70"
+                                                class="h-5 w-5 text-black/70 hover:text-primary! dark:text-white/70"
                                                 viewBox="0 0 24 24"
                                                 fill="none"
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -2572,7 +2572,7 @@
                                     <!-- loader -->
                                     <div class="grid min-h-[360px] place-content-center bg-white-light/30 dark:bg-dark dark:bg-opacity-[0.08]">
                                         <span
-                                            class="inline-flex h-5 w-5 animate-spin rounded-full border-2 border-black !border-l-transparent dark:border-white"
+                                            class="inline-flex h-5 w-5 animate-spin rounded-full border-2 border-black border-l-transparent! dark:border-white"
                                         ></span>
                                     </div>
                                 </div>
@@ -2586,7 +2586,7 @@
                                     <div x-data="dropdown" @click.outside="open = false" class="dropdown">
                                         <a href="javascript:;" @click="toggle">
                                             <svg
-                                                class="h-5 w-5 text-black/70 hover:!text-primary dark:text-white/70"
+                                                class="h-5 w-5 text-black/70 hover:text-primary! dark:text-white/70"
                                                 viewBox="0 0 24 24"
                                                 fill="none"
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -2609,7 +2609,7 @@
                                                 class="relative z-10 before:absolute before:top-10 before:left-4 before:h-[calc(100%-24px)] before:w-[2px] before:bg-white-dark/30 ltr:mr-2 rtl:ml-2"
                                             >
                                                 <div
-                                                    class="flex items-center justify-center w-8 h-8 text-white rounded-full shadow bg-secondary shadow-secondary"
+                                                    class="flex items-center justify-center w-8 h-8 text-white rounded-full shadow-sm bg-secondary shadow-secondary"
                                                 >
                                                     <svg
                                                         class="w-4 h-4"
@@ -2826,7 +2826,7 @@
                                                     class="w-full h-5 p-1 overflow-hidden rounded-full bg-dark-light shadow-3xl dark:bg-dark-light/10 dark:shadow-none"
                                                 >
                                                     <div
-                                                        class="relative h-full w-full rounded-full bg-gradient-to-r from-[#009ffd] to-[#2a2a72] before:absolute before:inset-y-0 before:m-auto before:h-2 before:w-2 before:rounded-full before:bg-white ltr:before:right-0.5 rtl:before:left-0.5"
+                                                        class="relative h-full w-full rounded-full bg-linear-to-r from-[#009ffd] to-[#2a2a72] before:absolute before:inset-y-0 before:m-auto before:h-2 before:w-2 before:rounded-full before:bg-white ltr:before:right-0.5 rtl:before:left-0.5"
                                                         style="width: 65%"
                                                     ></div>
                                                 </div>
@@ -2858,7 +2858,7 @@
                                                     class="w-full h-5 p-1 overflow-hidden rounded-full bg-dark-light shadow-3xl dark:bg-dark-light/10 dark:shadow-none"
                                                 >
                                                     <div
-                                                        class="relative h-full w-full rounded-full bg-gradient-to-r from-[#a71d31] to-[#3f0d12] before:absolute before:inset-y-0 before:m-auto before:h-2 before:w-2 before:rounded-full before:bg-white ltr:before:right-0.5 rtl:before:left-0.5"
+                                                        class="relative h-full w-full rounded-full bg-linear-to-r from-[#a71d31] to-[#3f0d12] before:absolute before:inset-y-0 before:m-auto before:h-2 before:w-2 before:rounded-full before:bg-white ltr:before:right-0.5 rtl:before:left-0.5"
                                                         style="width: 40%"
                                                     ></div>
                                                 </div>
@@ -2896,7 +2896,7 @@
                                                     class="w-full h-5 p-1 overflow-hidden rounded-full bg-dark-light shadow-3xl dark:bg-dark-light/10 dark:shadow-none"
                                                 >
                                                     <div
-                                                        class="relative h-full w-full rounded-full bg-gradient-to-r from-[#fe5f75] to-[#fc9842] before:absolute before:inset-y-0 before:m-auto before:h-2 before:w-2 before:rounded-full before:bg-white ltr:before:right-0.5 rtl:before:left-0.5"
+                                                        class="relative h-full w-full rounded-full bg-linear-to-r from-[#fe5f75] to-[#fc9842] before:absolute before:inset-y-0 before:m-auto before:h-2 before:w-2 before:rounded-full before:bg-white ltr:before:right-0.5 rtl:before:left-0.5"
                                                         style="width: 25%"
                                                     ></div>
                                                 </div>
@@ -3140,7 +3140,7 @@
                                     </div>
 
                                     <div class="absolute bottom-0 flex items-center justify-between w-full p-5 -mx-5">
-                                        <a href="javascript:;" class="btn btn-secondary btn-lg w-full border-0 bg-gradient-to-r from-[#3d38e1] to-[#1e9afe]"
+                                        <a href="javascript:;" class="btn btn-secondary btn-lg w-full border-0 bg-linear-to-r from-[#3d38e1] to-[#1e9afe]"
                                             >دیدن جزئیات</a
                                         >
                                     </div>
@@ -3161,7 +3161,7 @@
                                     <div x-data="dropdown" @click.outside="open = false" class="dropdown">
                                         <a href="javascript:;" @click="toggle" class="dark:text-white-light">
                                             <svg
-                                                class="h-5 w-5 text-black/70 hover:!text-primary dark:text-white/70"
+                                                class="h-5 w-5 text-black/70 hover:text-primary! dark:text-white/70"
                                                 viewBox="0 0 24 24"
                                                 fill="none"
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -3213,7 +3213,7 @@
                                         <p class="text-primary">65%</p>
                                     </div>
                                     <div class="mb-5 h-2.5 rounded-full bg-dark-light p-0.5 dark:bg-dark-light/10">
-                                        <div class="h-full rounded-full bg-gradient-to-r from-[#1e9afe] to-[#60dfcd]" style="width: 65%"></div>
+                                        <div class="h-full rounded-full bg-linear-to-r from-[#1e9afe] to-[#60dfcd]" style="width: 65%"></div>
                                     </div>
                                     <div class="flex items-end justify-between">
                                         <div class="flex items-center px-2 py-1 text-xs font-semibold rounded-full bg-danger/20 text-danger">
@@ -3237,7 +3237,7 @@
                                             3 روز مانده
                                         </div>
                                         <div
-                                            class="flex items-center justify-center group-hover:-space-x-2 rtl:space-x-reverse rtl:group-hover:space-x-reverse"
+                                            class="flex items-center justify-center group-hover:-space-x-2 rtl:space-x-reverse group-hover:rtl:space-x-reverse"
                                         >
                                             <span
                                                 class="flex h-9 w-9 items-center justify-center rounded-full bg-[#bfc9d4] font-semibold text-white opacity-0 transition-all duration-300 group-hover:opacity-100 dark:bg-dark"
@@ -3267,7 +3267,7 @@
                     <!-- end main content section -->
 
                     <!-- start footer section -->
-                    <p class="pt-6 text-center dark:text-white-dark ltr:sm:text-left rtl:sm:text-right">
+                    <p class="pt-6 text-center dark:text-white-dark sm:ltr:text-left sm:rtl:text-right">
                         © <span id="footer-year">2022</span>. تمام حقوق مادی و معنوی محفوظ است.
                     </p>
                     <!-- end footer section -->

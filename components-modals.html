@@ -55,14 +55,14 @@
         <!-- start theme customizer section -->
         <div x-data="customizer">
             <div
-                class="fixed inset-0 z-[51] hidden bg-[black]/60 px-4 transition-[display]"
-                :class="{'!block': showCustomizer}"
+                class="fixed inset-0 z-51 hidden bg-[black]/60 px-4 transition-[display]"
+                :class="{'block!': showCustomizer}"
                 @click="showCustomizer = false"
             ></div>
 
             <nav
-                class="fixed top-0 bottom-0 z-[51] w-full max-w-[400px] bg-white p-4 shadow-[5px_0_25px_0_rgba(94,92,154,0.1)] transition-[right] duration-300 ltr:-right-[400px] rtl:-left-[400px] dark:bg-[#0e1726]"
-                :class="{'ltr:!right-0 rtl:!left-0' : showCustomizer}"
+                class="fixed top-0 bottom-0 z-51 w-full max-w-[400px] bg-white p-4 shadow-[5px_0_25px_0_rgba(94,92,154,0.1)] transition-[right] duration-300 ltr:-right-[400px] rtl:-left-[400px] dark:bg-[#0e1726]"
+                :class="{'ltr:right-0! rtl:left-0!' : showCustomizer}"
             >
                 <a
                     href="javascript:;"
@@ -393,7 +393,7 @@
                             >
                                 <div class="flex items-center">
                                     <svg
-                                        class="group-hover:!text-primary"
+                                        class="group-hover:text-primary!"
                                         width="20"
                                         height="20"
                                         viewBox="0 0 24 24"
@@ -413,7 +413,7 @@
 
                                     <span class="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">داشبورد</span>
                                 </div>
-                                <div class="rtl:rotate-180" :class="{'!rotate-90' : activeDropdown === 'dashboard'}">
+                                <div class="rtl:rotate-180" :class="{'rotate-90!' : activeDropdown === 'dashboard'}">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M9 5L15 12L9 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
@@ -452,7 +452,7 @@
                             >
                                 <div class="flex items-center">
                                     <svg
-                                        class="group-hover:!text-primary"
+                                        class="group-hover:text-primary!"
                                         width="20"
                                         height="20"
                                         viewBox="0 0 24 24"
@@ -476,7 +476,7 @@
                                     </svg>
                                     <span class="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">کامپوننت ها</span>
                                 </div>
-                                <div class="rtl:rotate-180" :class="{'!rotate-90' : activeDropdown === 'components'}">
+                                <div class="rtl:rotate-180" :class="{'rotate-90!' : activeDropdown === 'components'}">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M9 5L15 12L9 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
@@ -521,7 +521,7 @@
                                         viewBox="0 0 24 24"
                                         fill="none"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        class="group-hover:!text-primary"
+                                        class="group-hover:text-primary!"
                                     >
                                         <path
                                             fill-rule="evenodd"
@@ -537,7 +537,7 @@
                                     </svg>
                                     <span class="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">عناصر</span>
                                 </div>
-                                <div class="rtl:rotate-180" :class="{'!rotate-90' : activeDropdown === 'elements'}">
+                                <div class="rtl:rotate-180" :class="{'rotate-90!' : activeDropdown === 'elements'}">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M9 5L15 12L9 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
@@ -596,7 +596,7 @@
                             <a href="charts.html" class="nav-link group">
                                 <div class="flex items-center">
                                     <svg
-                                        class="group-hover:!text-primary"
+                                        class="group-hover:text-primary!"
                                         width="20"
                                         height="20"
                                         viewBox="0 0 24 24"
@@ -620,7 +620,7 @@
                         <li class="nav-item">
                             <a href="apps-chat.html" class="group">
                                 <div class="flex items-center">
-                                    <svg class="group-hover:!text-primary" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg class="group-hover:text-primary!" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M10.4036 22.4797L10.6787 22.015C11.1195 21.2703 11.3399 20.8979 11.691 20.6902C12.0422 20.4825 12.5001 20.4678 13.4161 20.4385C14.275 20.4111 14.8523 20.3361 15.3458 20.1317C16.385 19.7012 17.2106 18.8756 17.641 17.8365C17.9639 17.0571 17.9639 16.0691 17.9639 14.093V13.2448C17.9639 10.4683 17.9639 9.08006 17.3389 8.06023C16.9892 7.48958 16.5094 7.0098 15.9388 6.66011C14.919 6.03516 13.5307 6.03516 10.7542 6.03516H8.20964C5.43314 6.03516 4.04489 6.03516 3.02507 6.66011C2.45442 7.0098 1.97464 7.48958 1.62495 8.06023C1 9.08006 1 10.4683 1 13.2448V14.093C1 16.0691 1 17.0571 1.32282 17.8365C1.75326 18.8756 2.57886 19.7012 3.61802 20.1317C4.11158 20.3361 4.68882 20.4111 5.5477 20.4385C6.46368 20.4678 6.92167 20.4825 7.27278 20.6902C7.6239 20.8979 7.84431 21.2703 8.28514 22.015L8.5602 22.4797C8.97002 23.1721 9.9938 23.1721 10.4036 22.4797ZM13.1928 14.5171C13.7783 14.5171 14.253 14.0424 14.253 13.4568C14.253 12.8713 13.7783 12.3966 13.1928 12.3966C12.6072 12.3966 12.1325 12.8713 12.1325 13.4568C12.1325 14.0424 12.6072 14.5171 13.1928 14.5171ZM10.5422 13.4568C10.5422 14.0424 10.0675 14.5171 9.48193 14.5171C8.89637 14.5171 8.42169 14.0424 8.42169 13.4568C8.42169 12.8713 8.89637 12.3966 9.48193 12.3966C10.0675 12.3966 10.5422 12.8713 10.5422 13.4568ZM5.77108 14.5171C6.35664 14.5171 6.83133 14.0424 6.83133 13.4568C6.83133 12.8713 6.35664 12.3966 5.77108 12.3966C5.18553 12.3966 4.71084 12.8713 4.71084 13.4568C4.71084 14.0424 5.18553 14.5171 5.77108 14.5171Z" fill="currentColor"></path>
                                         <path opacity="0.5" d="M15.486 1C16.7529 0.999992 17.7603 0.999986 18.5683 1.07681C19.3967 1.15558 20.0972 1.32069 20.7212 1.70307C21.3632 2.09648 21.9029 2.63623 22.2963 3.27821C22.6787 3.90219 22.8438 4.60265 22.9226 5.43112C22.9994 6.23907 22.9994 7.24658 22.9994 8.51343V9.37869C22.9994 10.2803 22.9994 10.9975 22.9597 11.579C22.9191 12.174 22.8344 12.6848 22.6362 13.1632C22.152 14.3323 21.2232 15.2611 20.0541 15.7453C20.0249 15.7574 19.9955 15.7691 19.966 15.7804C19.8249 15.8343 19.7039 15.8806 19.5978 15.915H17.9477C17.9639 15.416 17.9639 14.8217 17.9639 14.093V13.2448C17.9639 10.4683 17.9639 9.08006 17.3389 8.06023C16.9892 7.48958 16.5094 7.0098 15.9388 6.66011C14.919 6.03516 13.5307 6.03516 10.7542 6.03516H8.20964C7.22423 6.03516 6.41369 6.03516 5.73242 6.06309V4.4127C5.76513 4.29934 5.80995 4.16941 5.86255 4.0169C5.95202 3.75751 6.06509 3.51219 6.20848 3.27821C6.60188 2.63623 7.14163 2.09648 7.78361 1.70307C8.40759 1.32069 9.10805 1.15558 9.93651 1.07681C10.7445 0.999986 11.7519 0.999992 13.0188 1H15.486Z" fill="currentColor"></path>
                                     </svg>
@@ -632,7 +632,7 @@
                             <a href="widgets.html" class="nav-link group">
                                 <div class="flex items-center">
                                     <svg
-                                        class="group-hover:!text-primary"
+                                        class="group-hover:text-primary!"
                                         width="20"
                                         height="20"
                                         viewBox="0 0 24 24"
@@ -667,7 +667,7 @@
                             <a href="font-icons.html" class="nav-link group">
                                 <div class="flex items-center">
                                     <svg
-                                        class="group-hover:!text-primary"
+                                        class="group-hover:text-primary!"
                                         width="20"
                                         height="20"
                                         viewBox="0 0 24 24"
@@ -695,7 +695,7 @@
                             <a href="tables.html" class="nav-link group">
                                 <div class="flex items-center">
                                     <svg
-                                        class="group-hover:!text-primary"
+                                        class="group-hover:text-primary!"
                                         width="20"
                                         height="20"
                                         viewBox="0 0 24 24"
@@ -734,7 +734,7 @@
                             >
                                 <div class="flex items-center">
                                     <svg
-                                        class="group-hover:!text-primary"
+                                        class="group-hover:text-primary!"
                                         width="20"
                                         height="20"
                                         viewBox="0 0 24 24"
@@ -763,7 +763,7 @@
                                     </svg>
                                     <span class="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">فرم ها</span>
                                 </div>
-                                <div class="rtl:rotate-180" :class="{'!rotate-90' : activeDropdown === 'forms'}">
+                                <div class="rtl:rotate-180" :class="{'rotate-90!' : activeDropdown === 'forms'}">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M9 5L15 12L9 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
@@ -820,7 +820,7 @@
                             >
                                 <div class="flex items-center">
                                     <svg
-                                        class="group-hover:!text-primary"
+                                        class="group-hover:text-primary!"
                                         width="20"
                                         height="20"
                                         viewBox="0 0 24 24"
@@ -834,7 +834,7 @@
                                     </svg>
                                     <span class="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">کاربران</span>
                                 </div>
-                                <div class="rtl:rotate-180" :class="{'!rotate-90' : activeDropdown === 'users'}">
+                                <div class="rtl:rotate-180" :class="{'rotate-90!' : activeDropdown === 'users'}">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M9 5L15 12L9 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
@@ -858,7 +858,7 @@
                             >
                                 <div class="flex items-center">
                                     <svg
-                                        class="group-hover:!text-primary"
+                                        class="group-hover:text-primary!"
                                         width="20"
                                         height="20"
                                         viewBox="0 0 24 24"
@@ -889,7 +889,7 @@
                                     </svg>
                                     <span class="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">احراز هویت</span>
                                 </div>
-                                <div class="rtl:rotate-180" :class="{'!rotate-90' : activeDropdown === 'authentication'}">
+                                <div class="rtl:rotate-180" :class="{'rotate-90!' : activeDropdown === 'authentication'}">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M9 5L15 12L9 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
@@ -932,7 +932,7 @@
             <div class="main-content">
                <!-- start header section -->
                <header :class="{'dark' : $store.app.semidark && $store.app.menu === 'horizontal'}">
-                <div class="shadow-sm">
+                <div class="shadow-xs">
                     <div class="relative flex w-full items-center bg-white px-5 py-2.5 dark:bg-[#0e1726]">
                         <div class="flex items-center justify-between horizontal-logo ltr:mr-2 rtl:ml-2 lg:hidden">
                             <a href="index.html" class="flex items-center main-logo shrink-0">
@@ -954,18 +954,18 @@
                        
                         <div
                             x-data="header"
-                            class="flex items-center space-x-1.5 ltr:ml-auto rtl:mr-auto rtl:space-x-reverse dark:text-[#d0d2d6] sm:flex-1 ltr:sm:ml-0 sm:rtl:mr-0 lg:space-x-2"
+                            class="flex items-center space-x-1.5 ltr:ml-auto rtl:mr-auto rtl:space-x-reverse dark:text-[#d0d2d6] sm:flex-1 sm:ltr:ml-0 sm:rtl:mr-0 lg:space-x-2"
                         >
                             <div class="sm:ltr:mr-auto sm:rtl:ml-auto" x-data="{ search: false }" @click.outside="search = false">
                                 <form
                                     class="absolute inset-x-0 z-10 hidden mx-4 -translate-y-1/2 top-1/2 sm:relative sm:top-0 sm:mx-0 sm:block sm:translate-y-0"
-                                    :class="{'!block' : search}"
+                                    :class="{'block!' : search}"
                                     @submit.prevent="search = false"
                                 >
                                     <div class="relative">
                                         <input
                                             type="text"
-                                            class="bg-gray-100 peer form-input placeholder:tracking-widest ltr:pl-9 ltr:pr-9 rtl:pr-9 rtl:pl-9 sm:bg-transparent ltr:sm:pr-4 rtl:sm:pl-4"
+                                            class="bg-gray-100 peer form-input placeholder:tracking-widest ltr:pl-9 ltr:pr-9 rtl:pr-9 rtl:pl-9 sm:bg-transparent sm:ltr:pr-4 sm:rtl:pl-4"
                                             placeholder="جستجو"
                                         />
                                         <button
@@ -1125,10 +1125,10 @@
                                     x-show="open"
                                     x-transition
                                     x-transition.duration.300ms
-                                    class="top-11 w-[300px] divide-y !py-0 text-dark ltr:-right-2 rtl:-left-2 dark:divide-white/10 dark:text-white-dark sm:w-[350px]"
+                                    class="top-11 w-[300px] divide-y py-0! text-dark ltr:-right-2 rtl:-left-2 dark:divide-white/10 dark:text-white-dark sm:w-[350px]"
                                 >
                                     <li>
-                                        <div class="flex items-center justify-between px-4 py-2 font-semibold hover:!bg-transparent">
+                                        <div class="flex items-center justify-between px-4 py-2 font-semibold hover:bg-transparent!">
                                             <h4 class="text-lg">نوتیفیکیشن</h4>
                                             <template x-if="notifications.length">
                                                 <span class="badge bg-primary/80" x-text="notifications.length + 'New'"></span>
@@ -1138,7 +1138,7 @@
                                     <template x-for="notification in notifications">
                                         <li class="dark:text-white-light/90">
                                             <div class="flex items-center px-4 py-2 group" @click.self="toggle">
-                                                <div class="grid rounded place-content-center">
+                                                <div class="grid rounded-sm place-content-center">
                                                     <div class="relative w-12 h-12">
                                                         <img
                                                             class="object-cover w-12 h-12 rounded-full"
@@ -1181,7 +1181,7 @@
                                     </template>
                                     <template x-if="!notifications.length">
                                         <li>
-                                            <div class="!grid min-h-[200px] place-content-center text-lg hover:!bg-transparent">
+                                            <div class="grid! min-h-[200px] place-content-center text-lg hover:bg-transparent!">
                                                 <div class="mx-auto mb-4 rounded-full text-primary ring-4 ring-primary/30">
                                                     <svg width="40" height="40" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path
@@ -1205,7 +1205,7 @@
                                     </template>
                                 </ul>
                             </div>
-                            <div class="flex-shrink-0 dropdown" x-data="dropdown" @click.outside="open = false">
+                            <div class="shrink-0 dropdown" x-data="dropdown" @click.outside="open = false">
                                 <a href="javascript:;" class="relative group" @click="toggle()">
                                     <span
                                         ><img
@@ -1219,7 +1219,7 @@
                                     x-show="open"
                                     x-transition
                                     x-transition.duration.300ms
-                                    class="top-11 w-[230px] !py-0 font-semibold text-dark ltr:right-0 rtl:left-0 dark:text-white-dark dark:text-white-light/90"
+                                    class="top-11 w-[230px] py-0! font-semibold text-dark ltr:right-0 rtl:left-0 dark:text-white-dark dark:text-white-light/90"
                                 >
                                     <li>
                                         <div class="flex items-center px-4 py-4">
@@ -1228,7 +1228,7 @@
                                             </div>
                                             <div class="ltr:pl-4 rtl:pr-4">
                                                 <h4 class="text-base">
-                                                     جان دو<span class="px-1 text-xs rounded bg-success-light text-success ltr:ml-2 rtl:ml-2">Pro</span>
+                                                     جان دو<span class="px-1 text-xs rounded-sm bg-success-light text-success ltr:ml-2 rtl:ml-2">Pro</span>
                                                 </h4>
                                                 <a
                                                     class="text-black/60 hover:text-primary dark:text-dark-light/60 dark:hover:text-white"
@@ -1326,7 +1326,7 @@
                                         >
                                     </li>
                                     <li class="border-t border-white-light dark:border-white-light/10">
-                                        <a href="auth-boxed-signin.html" class="!py-3 text-danger" @click="toggle">
+                                        <a href="auth-boxed-signin.html" class="py-3! text-danger" @click="toggle">
                                             <svg
                                                 class="h-4.5 w-4.5 rotate-90 ltr:mr-2 rtl:ml-2"
                                                 width="18"
@@ -1423,7 +1423,7 @@
                                     <div class="flex items-center justify-center">
                                         <button type="button" class="btn btn-primary" @click="toggle">اجرای مودال</button>
                                     </div>
-                                    <div class="fixed inset-0 z-[999] hidden overflow-y-auto bg-[black]/60" :class="open && '!block'">
+                                    <div class="fixed inset-0 z-999 hidden overflow-y-auto bg-[black]/60" :class="open && 'block!'">
                                         <div class="flex items-start justify-center min-h-screen px-4" @click.self="open = false">
                                             <div
                                                 x-show="open"
@@ -1467,7 +1467,7 @@
                                     </div>
                                 </div>
                                 <template x-if="codeArr.includes('code1')">
-                                    <pre class="code overflow-auto rounded-md !bg-[#191e3a] p-4 text-white">
+                                    <pre class="code overflow-auto rounded-md bg-[#191e3a]! p-4 text-white">
                     &lt;!-- basic --&gt;
                     &lt;div x-data=&quot;modal&quot; class=&quot;mb-5&quot;&gt;
                         &lt;!-- button --&gt;
@@ -1476,7 +1476,7 @@
                         &lt;/div&gt;
                     
                         &lt;!-- modal --&gt;
-                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-[999] hidden overflow-y-auto&quot; :class=&quot;open &amp;&amp; '!block'&quot;&gt;
+                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-999 hidden overflow-y-auto&quot; :class=&quot;open &amp;&amp; 'block!'&quot;&gt;
                             &lt;div class=&quot;flex items-start justify-center min-h-screen px-4&quot; @click.self=&quot;open = false&quot;&gt;
                                 &lt;div x-show=&quot;open&quot; x-transition x-transition.duration.300 class=&quot;panel border-0 p-0 rounded-lg overflow-hidden my-8 w-full max-w-lg&quot;&gt;
                                     &lt;div class=&quot;flex bg-[#fbfbfb] dark:bg-[#121c2c] items-center justify-between px-5 py-3&quot;&gt;
@@ -1562,7 +1562,7 @@
                                     <div class="flex items-center justify-center">
                                         <button type="button" class="btn btn-info" @click="toggle">اجرای مودال</button>
                                     </div>
-                                    <div class="fixed inset-0 z-[999] hidden overflow-y-auto bg-[black]/60" :class="open && '!block'">
+                                    <div class="fixed inset-0 z-999 hidden overflow-y-auto bg-[black]/60" :class="open && 'block!'">
                                         <div class="flex items-center justify-center min-h-screen px-4" @click.self="open = false">
                                             <div
                                                 x-show="open"
@@ -1606,7 +1606,7 @@
                                     </div>
                                 </div>
                                 <template x-if="codeArr.includes('code2')">
-                                    <pre class="code overflow-auto rounded-md !bg-[#191e3a] p-4 text-white">
+                                    <pre class="code overflow-auto rounded-md bg-[#191e3a]! p-4 text-white">
                     &lt;!-- vertically centered --&gt;
                     &lt;div class=&quot;mb-5&quot; x-data=&quot;modal&quot;&gt;
                         &lt;!-- button --&gt;
@@ -1615,7 +1615,7 @@
                         &lt;/div&gt;
                     
                         &lt;!-- modal --&gt;
-                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-[999] hidden overflow-y-auto&quot; :class=&quot;open &amp;&amp; '!block'&quot;&gt;
+                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-999 hidden overflow-y-auto&quot; :class=&quot;open &amp;&amp; 'block!'&quot;&gt;
                             &lt;div class=&quot;flex items-center justify-center min-h-screen px-4&quot; @click.self=&quot;open = false&quot;&gt;
                                 &lt;div x-show=&quot;open&quot; x-transition x-transition.duration.300 class=&quot;panel border-0 p-0 rounded-lg overflow-hidden w-full max-w-lg my-8&quot;&gt;
                                     &lt;div class=&quot;flex bg-[#fbfbfb] dark:bg-[#121c2c] items-center justify-between px-5 py-3&quot;&gt;
@@ -1701,7 +1701,7 @@
                                     <div class="flex items-center justify-center">
                                         <button type="button" class="btn btn-secondary" @click="toggle">Static modal</button>
                                     </div>
-                                    <div class="fixed inset-0 z-[999] hidden overflow-y-auto bg-[black]/60" :class="open && '!block'">
+                                    <div class="fixed inset-0 z-999 hidden overflow-y-auto bg-[black]/60" :class="open && 'block!'">
                                         <div class="flex items-start justify-center min-h-screen px-4">
                                             <div
                                                 x-show="open"
@@ -1745,7 +1745,7 @@
                                     </div>
                                 </div>
                                 <template x-if="codeArr.includes('code3')">
-                                    <pre class="code overflow-auto rounded-md !bg-[#191e3a] p-4 text-white">
+                                    <pre class="code overflow-auto rounded-md bg-[#191e3a]! p-4 text-white">
                     &lt;!-- static --&gt;
                     &lt;div x-data=&quot;modal&quot; class=&quot;mb-5&quot;&gt;
                         &lt;!-- button --&gt;
@@ -1754,7 +1754,7 @@
                         &lt;/div&gt;
                     
                         &lt;!-- modal --&gt;
-                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-[999] hidden overflow-y-auto&quot; :class=&quot;open &amp;&amp; '!block'&quot;&gt;
+                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-999 hidden overflow-y-auto&quot; :class=&quot;open &amp;&amp; 'block!'&quot;&gt;
                             &lt;div class=&quot;flex items-start justify-center min-h-screen px-4&quot;&gt;
                                 &lt;div x-show=&quot;open&quot; x-transition x-transition.duration.300 class=&quot;panel border-0 p-0 rounded-lg overflow-hidden w-full max-w-lg my-8&quot;&gt;
                                     &lt;div class=&quot;flex bg-[#fbfbfb] dark:bg-[#121c2c] items-center justify-between px-5 py-3&quot;&gt;
@@ -1840,7 +1840,7 @@
                                     <div class="flex items-center justify-center">
                                         <button type="button" class="btn btn-success" @click="toggle">اجرای مودال</button>
                                     </div>
-                                    <div class="fixed inset-0 z-[999] hidden bg-[black]/60 px-4" :class="open && '!block'">
+                                    <div class="fixed inset-0 z-999 hidden bg-[black]/60 px-4" :class="open && 'block!'">
                                         <div class="flex items-start justify-center min-h-screen px-4" @click.self="open = false">
                                             <div class="w-full max-w-lg p-0 my-8 overflow-hidden border-0 rounded-lg panel">
                                                 <div class="flex items-center justify-between bg-[#fbfbfb] px-5 py-3 dark:bg-[#121c2c]">
@@ -1879,7 +1879,7 @@
                                     </div>
                                 </div>
                                 <template x-if="codeArr.includes('code4')">
-                                    <pre class="code overflow-auto rounded-md !bg-[#191e3a] p-4 text-white">
+                                    <pre class="code overflow-auto rounded-md bg-[#191e3a]! p-4 text-white">
                     &lt;!-- remove animation --&gt;
                     &lt;div class=&quot;mb-5&quot; x-data=&quot;modal&quot;&gt;
                         &lt;!-- button --&gt;
@@ -1888,7 +1888,7 @@
                         &lt;/div&gt;
                     
                         &lt;!-- modal --&gt;
-                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-[999] px-4 hidden&quot; :class=&quot;open &amp;&amp; '!block'&quot;&gt;
+                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-999 px-4 hidden&quot; :class=&quot;open &amp;&amp; 'block!'&quot;&gt;
                             &lt;div class=&quot;flex items-start justify-center min-h-screen px-4&quot; @click.self=&quot;open = false&quot;&gt;
                                 &lt;div class=&quot;panel border-0 p-0 rounded-lg overflow-hidden  w-full max-w-lg my-8&quot;&gt;
                                     &lt;div class=&quot;flex bg-[#fbfbfb] dark:bg-[#121c2c] items-center justify-between px-5 py-3&quot;&gt;
@@ -1972,7 +1972,7 @@
                                     <div class="flex items-center justify-center gap-2">
                                         <div x-data="modal">
                                             <button type="button" class="btn btn-warning" @click="toggle">خیلی بزرگ</button>
-                                            <div class="fixed inset-0 z-[999] hidden bg-[black]/60" :class="open && '!block'">
+                                            <div class="fixed inset-0 z-999 hidden bg-[black]/60" :class="open && 'block!'">
                                                 <div class="flex items-start justify-center min-h-screen px-4" @click.self="open = false">
                                                     <div
                                                         x-show="open"
@@ -2018,7 +2018,7 @@
 
                                         <div x-data="modal">
                                             <button type="button" class="btn btn-danger" @click="toggle">بزرگ</button>
-                                            <div class="fixed inset-0 z-[999] hidden bg-[black]/60" :class="open && '!block'">
+                                            <div class="fixed inset-0 z-999 hidden bg-[black]/60" :class="open && 'block!'">
                                                 <div class="flex items-start justify-center min-h-screen px-4" @click.self="open = false">
                                                     <div
                                                         x-show="open"
@@ -2064,7 +2064,7 @@
 
                                         <div x-data="modal">
                                             <button type="button" class="btn btn-secondary" @click="toggle">کوچک</button>
-                                            <div class="fixed inset-0 z-[999] hidden overflow-y-auto bg-[black]/60" :class="open && '!block'">
+                                            <div class="fixed inset-0 z-999 hidden overflow-y-auto bg-[black]/60" :class="open && 'block!'">
                                                 <div class="flex items-start justify-center min-h-screen px-4" @click.self="open = false">
                                                     <div
                                                         x-show="open"
@@ -2110,14 +2110,14 @@
                                     </div>
                                 </div>
                                 <template x-if="codeArr.includes('code5')">
-                                    <pre class="code overflow-auto rounded-md !bg-[#191e3a] p-4 text-white">
+                                    <pre class="code overflow-auto rounded-md bg-[#191e3a]! p-4 text-white">
                     &lt;!-- extra large --&gt;    
                     &lt;div x-data=&quot;modal&quot;&gt;
                         &lt;!-- button --&gt;    
                         &lt;button type=&quot;button&quot; class=&quot;btn btn-warning&quot; @click=&quot;toggle&quot;&gt;Extra large&lt;/button&gt;
                         
                         &lt;!-- modal --&gt; 
-                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-[999]  hidden&quot; :class=&quot;open &amp;&amp; '!block'&quot;&gt;
+                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-999  hidden&quot; :class=&quot;open &amp;&amp; 'block!'&quot;&gt;
                             &lt;div class=&quot;flex items-start justify-center min-h-screen px-4&quot; @click.self=&quot;open = false&quot;&gt;
                                 &lt;div x-show=&quot;open&quot; x-transition x-transition.duration.300 class=&quot;panel border-0 p-0 rounded-lg overflow-hidden w-full max-w-5xl my-8&quot;&gt;
                                     &lt;div class=&quot;flex bg-[#fbfbfb] dark:bg-[#121c2c] items-center justify-between px-5 py-3&quot;&gt;
@@ -2144,7 +2144,7 @@
                         &lt;button type=&quot;button&quot; class=&quot;btn btn-danger&quot; @click=&quot;toggle&quot;&gt;Large&lt;/button&gt;
                         
                         &lt;!-- modal --&gt; 
-                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-[999]  hidden&quot; :class=&quot;open &amp;&amp; '!block'&quot;&gt;
+                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-999  hidden&quot; :class=&quot;open &amp;&amp; 'block!'&quot;&gt;
                             &lt;div class=&quot;flex items-start justify-center min-h-screen px-4&quot; @click.self=&quot;open = false&quot;&gt;
                                 &lt;div x-show=&quot;open&quot; x-transition x-transition.duration.300 class=&quot;panel border-0 p-0 rounded-lg overflow-hidden  w-full max-w-xl my-8&quot;&gt;
                                     &lt;div class=&quot;flex bg-[#fbfbfb] dark:bg-[#121c2c] items-center justify-between px-5 py-3&quot;&gt;
@@ -2171,7 +2171,7 @@
                         &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot; @click=&quot;toggle&quot;&gt;Small&lt;/button&gt;
                             
                         &lt;!-- modal --&gt; 
-                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-[999] hidden overflow-y-auto&quot; :class=&quot;open &amp;&amp; '!block'&quot;&gt;
+                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-999 hidden overflow-y-auto&quot; :class=&quot;open &amp;&amp; 'block!'&quot;&gt;
                             &lt;div class=&quot;flex items-start justify-center min-h-screen px-4&quot; @click.self=&quot;open = false&quot;&gt;
                                 &lt;div x-show=&quot;open&quot; x-transition x-transition.duration.300 class=&quot;panel border-0 p-0 rounded-lg overflow-hidden  w-full max-w-sm my-8&quot;&gt;
                                     &lt;div class=&quot;flex bg-[#fbfbfb] dark:bg-[#121c2c] items-center justify-between px-5 py-3&quot;&gt;
@@ -2257,7 +2257,7 @@
                                     <div class="flex items-center justify-center">
                                         <button type="button" class="btn btn-primary" @click="toggle">اجرای Youtube</button>
                                     </div>
-                                    <div class="fixed inset-0 z-[999] hidden overflow-y-auto bg-[black]/60" :class="open && '!block'">
+                                    <div class="fixed inset-0 z-999 hidden overflow-y-auto bg-[black]/60" :class="open && 'block!'">
                                         <div class="flex items-start justify-center min-h-screen px-4" @click.self="open = false">
                                             <div x-show="open" x-transition x-transition.duration.300 class="w-full max-w-3xl my-8 overflow-hidden">
                                                 <div class="text-right">
@@ -2285,7 +2285,7 @@
                                     </div>
                                 </div>
                                 <template x-if="codeArr.includes('code6')">
-                                    <pre class="code overflow-auto rounded-md !bg-[#191e3a] p-4 text-white">
+                                    <pre class="code overflow-auto rounded-md bg-[#191e3a]! p-4 text-white">
                     &lt;!-- video --&gt;
                     &lt;div class=&quot;mb-5&quot; x-data=&quot;modal&quot;&gt;
                         &lt;!-- button --&gt;           
@@ -2294,7 +2294,7 @@
                         &lt;/div&gt;
                     
                         &lt;!-- modal --&gt;
-                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-[999] hidden overflow-y-auto&quot; :class=&quot;open &amp;&amp; '!block'&quot;&gt;
+                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-999 hidden overflow-y-auto&quot; :class=&quot;open &amp;&amp; 'block!'&quot;&gt;
                             &lt;div class=&quot;flex items-start justify-center min-h-screen px-4&quot; @click.self=&quot;open = false&quot;&gt;
                                 &lt;div x-show=&quot;open&quot; x-transition x-transition.duration.300 class=&quot;w-11/12 lg:w-[800px]  my-8&quot;&gt;
                                     &lt;button type=&quot;button&quot; class=&quot;text-white-dark hover:text-dark&quot; @click=&quot;toggle&quot;&gt;
@@ -2369,7 +2369,7 @@
                                     <div class="flex flex-wrap items-center justify-center gap-2">
                                         <div x-data="modal">
                                             <button type="button" class="btn btn-primary" @click="toggle">FadeIn</button>
-                                            <div class="fixed inset-0 z-[999] hidden overflow-y-auto bg-[black]/60" :class="open && '!block'">
+                                            <div class="fixed inset-0 z-999 hidden overflow-y-auto bg-[black]/60" :class="open && 'block!'">
                                                 <div class="flex items-start justify-center min-h-screen px-4" @click.self="open = false">
                                                     <div
                                                         class="w-full max-w-lg p-0 my-8 overflow-hidden border-0 rounded-lg panel animate__animated animate__fadeIn"
@@ -2412,7 +2412,7 @@
 
                                         <div x-data="modal">
                                             <button type="button" class="btn btn-info" @click="toggle">SlideIn Down</button>
-                                            <div class="fixed inset-0 z-[999] hidden overflow-y-auto bg-[black]/60" :class="open && '!block'">
+                                            <div class="fixed inset-0 z-999 hidden overflow-y-auto bg-[black]/60" :class="open && 'block!'">
                                                 <div class="flex items-start justify-center min-h-screen px-4" @click.self="open = false">
                                                     <div
                                                         class="w-full max-w-lg p-0 my-8 overflow-hidden border-0 rounded-lg panel animate__animated animate__slideInDown"
@@ -2455,7 +2455,7 @@
 
                                         <div x-data="modal">
                                             <button type="button" class="btn btn-success" @click="toggle">FadeIn Up</button>
-                                            <div class="fixed inset-0 z-[999] hidden overflow-y-auto bg-[black]/60" :class="open && '!block'">
+                                            <div class="fixed inset-0 z-999 hidden overflow-y-auto bg-[black]/60" :class="open && 'block!'">
                                                 <div class="flex items-start justify-center min-h-screen px-4" @click.self="open = false">
                                                     <div
                                                         class="w-full max-w-lg p-0 my-8 overflow-hidden border-0 rounded-lg panel animate__animated animate__fadeInUp"
@@ -2498,7 +2498,7 @@
 
                                         <div x-data="modal">
                                             <button type="button" class="btn btn-warning" @click="toggle">SlideIn Up</button>
-                                            <div class="fixed inset-0 z-[999] hidden overflow-y-auto bg-[black]/60" :class="open && '!block'">
+                                            <div class="fixed inset-0 z-999 hidden overflow-y-auto bg-[black]/60" :class="open && 'block!'">
                                                 <div class="flex items-start justify-center min-h-screen px-4 py-8" @click.self="open = false">
                                                     <div
                                                         class="w-full max-w-lg p-0 overflow-hidden border-0 rounded-lg panel animate__animated animate__slideInUp"
@@ -2541,7 +2541,7 @@
 
                                         <div x-data="modal">
                                             <button type="button" class="btn btn-danger" @click="toggle">FadeIn Left</button>
-                                            <div class="fixed inset-0 z-[999] hidden overflow-y-auto bg-[black]/60" :class="open && '!block'">
+                                            <div class="fixed inset-0 z-999 hidden overflow-y-auto bg-[black]/60" :class="open && 'block!'">
                                                 <div class="flex items-start justify-center min-h-screen px-4" @click.self="open = false">
                                                     <div
                                                         class="w-full max-w-lg p-0 my-8 overflow-hidden border-0 rounded-lg panel animate__animated"
@@ -2585,7 +2585,7 @@
 
                                         <div x-data="modal">
                                             <button type="button" class="btn btn-secondary" @click="toggle">RotateIn Left</button>
-                                            <div class="fixed inset-0 z-[999] hidden overflow-y-auto bg-[black]/60" :class="open && '!block'">
+                                            <div class="fixed inset-0 z-999 hidden overflow-y-auto bg-[black]/60" :class="open && 'block!'">
                                                 <div class="flex items-start justify-center min-h-screen px-4" @click.self="open = false">
                                                     <div
                                                         class="w-full max-w-lg p-0 my-8 overflow-hidden border-0 rounded-lg panel animate__animated"
@@ -2629,7 +2629,7 @@
 
                                         <div x-data="modal">
                                             <button type="button" class="btn btn-dark" @click="toggle">FadeIn Right</button>
-                                            <div class="fixed inset-0 z-[999] hidden overflow-y-auto bg-[black]/60" :class="open && '!block'">
+                                            <div class="fixed inset-0 z-999 hidden overflow-y-auto bg-[black]/60" :class="open && 'block!'">
                                                 <div class="flex items-start justify-center min-h-screen px-4" @click.self="open = false">
                                                     <div
                                                         class="w-full max-w-lg p-0 my-8 overflow-hidden border-0 rounded-lg panel animate__animated"
@@ -2673,7 +2673,7 @@
 
                                         <div x-data="modal">
                                             <button type="button" class="btn btn-primary" @click="toggle">ZoomIn Up</button>
-                                            <div class="fixed inset-0 z-[999] hidden overflow-y-auto bg-[black]/60" :class="open && '!block'">
+                                            <div class="fixed inset-0 z-999 hidden overflow-y-auto bg-[black]/60" :class="open && 'block!'">
                                                 <div class="flex items-start justify-center min-h-screen px-4" @click.self="open = false">
                                                     <div
                                                         class="w-full max-w-lg p-0 my-8 overflow-hidden border-0 rounded-lg panel animate__animated animate__zoomInUp"
@@ -2716,14 +2716,14 @@
                                     </div>
                                 </div>
                                 <template x-if="codeArr.includes('code7')">
-                                    <pre class="code overflow-auto rounded-md !bg-[#191e3a] p-4 text-white">
+                                    <pre class="code overflow-auto rounded-md bg-[#191e3a]! p-4 text-white">
                     &lt;!-- fadein --&gt;
                     &lt;div x-data=&quot;modal&quot;&gt;
                         &lt;!-- button --&gt;    
                         &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; @click=&quot;toggle&quot;&gt;FadeIn&lt;/button&gt;
                         
                         &lt;!-- modal --&gt;
-                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-[999] hidden overflow-y-auto&quot; :class=&quot;open &amp;&amp; '!block'&quot;&gt;
+                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-999 hidden overflow-y-auto&quot; :class=&quot;open &amp;&amp; 'block!'&quot;&gt;
                             &lt;div class=&quot;flex items-start justify-center min-h-screen px-4&quot; @click.self=&quot;open = false&quot;&gt;
                                 &lt;div class=&quot;panel border-0 p-0 rounded-lg overflow-hidden w-full max-w-lg my-8 animate__animated animate__fadeIn&quot;&gt;
                                     &lt;div class=&quot;flex bg-[#fbfbfb] dark:bg-[#121c2c] items-center justify-between px-5 py-3&quot;&gt;
@@ -2752,7 +2752,7 @@
                         &lt;button type=&quot;button&quot; class=&quot;btn btn-info&quot; @click=&quot;toggle&quot;&gt;SlideIn Down&lt;/button&gt;
                         
                         &lt;!-- modal --&gt;
-                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-[999] hidden overflow-y-auto&quot; :class=&quot;open &amp;&amp; '!block'&quot;&gt;
+                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-999 hidden overflow-y-auto&quot; :class=&quot;open &amp;&amp; 'block!'&quot;&gt;
                             &lt;div class=&quot;flex items-start justify-center min-h-screen px-4&quot; @click.self=&quot;open = false&quot;&gt;
                                 &lt;div class=&quot;panel border-0 p-0 rounded-lg overflow-hidden w-full max-w-lg my-8 animate__animated animate__slideInDown&quot;&gt;
                                     &lt;div class=&quot;flex bg-[#fbfbfb] dark:bg-[#121c2c] items-center justify-between px-5 py-3&quot;&gt;
@@ -2781,7 +2781,7 @@
                         &lt;button type=&quot;button&quot; class=&quot;btn btn-success&quot; @click=&quot;toggle&quot;&gt;FadeIn Up&lt;/button&gt;
                         
                         &lt;!-- modal --&gt;
-                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-[999] hidden overflow-y-auto&quot; :class=&quot;open &amp;&amp; '!block'&quot;&gt;
+                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-999 hidden overflow-y-auto&quot; :class=&quot;open &amp;&amp; 'block!'&quot;&gt;
                             &lt;div class=&quot;flex items-start justify-center min-h-screen px-4&quot; @click.self=&quot;open = false&quot;&gt;
                                 &lt;div class=&quot;panel border-0 p-0 rounded-lg overflow-hidden w-full max-w-lg my-8 animate__animated animate__fadeInUp&quot;&gt;
                                     &lt;div class=&quot;flex bg-[#fbfbfb] dark:bg-[#121c2c] items-center justify-between px-5 py-3&quot;&gt;
@@ -2810,7 +2810,7 @@
                         &lt;button type=&quot;button&quot; class=&quot;btn btn-warning&quot; @click=&quot;toggle&quot;&gt;SlideIn Up&lt;/button&gt;
                         
                         &lt;!-- modal --&gt;
-                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-[999] hidden overflow-y-auto&quot; :class=&quot;open &amp;&amp; '!block'&quot;&gt;
+                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-999 hidden overflow-y-auto&quot; :class=&quot;open &amp;&amp; 'block!'&quot;&gt;
                             &lt;div class=&quot;flex items-start justify-center min-h-screen px-4&quot; @click.self=&quot;open = false&quot;&gt;
                                 &lt;div class=&quot;panel border-0 p-0 rounded-lg overflow-hidden w-full max-w-lg my-8 animate__animated animate__slideInUp&quot;&gt;
                                     &lt;div class=&quot;flex bg-[#fbfbfb] dark:bg-[#121c2c] items-center justify-between px-5 py-3&quot;&gt;
@@ -2837,7 +2837,7 @@
                         &lt;button type=&quot;button&quot; class=&quot;btn btn-danger&quot; @click=&quot;toggle&quot;&gt;FadeIn Left&lt;/button&gt;
                         
                         &lt;!-- modal --&gt;
-                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-[999] hidden overflow-y-auto&quot; :class=&quot;open &amp;&amp; '!block'&quot;&gt;
+                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-999 hidden overflow-y-auto&quot; :class=&quot;open &amp;&amp; 'block!'&quot;&gt;
                             &lt;div class=&quot;flex items-start justify-center min-h-screen px-4&quot; @click.self=&quot;open = false&quot;&gt;
                                 &lt;div class=&quot;panel border-0 p-0 rounded-lg overflow-hidden w-full max-w-lg my-8 animate__animated&quot; :class=&quot;$store.app.rtlClass === 'rtl' ? 'animate__fadeInRight' : 'animate__fadeInLeft'&quot;&gt;
                                     &lt;div class=&quot;flex bg-[#fbfbfb] dark:bg-[#121c2c] items-center justify-between px-5 py-3&quot;&gt;
@@ -2866,7 +2866,7 @@
                         &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot; @click=&quot;toggle&quot;&gt;RotateIn Left&lt;/button&gt;
                         
                         &lt;!-- modal --&gt;
-                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-[999] hidden overflow-y-auto&quot; :class=&quot;open &amp;&amp; '!block'&quot;&gt;
+                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-999 hidden overflow-y-auto&quot; :class=&quot;open &amp;&amp; 'block!'&quot;&gt;
                             &lt;div class=&quot;flex items-start justify-center min-h-screen px-4&quot; @click.self=&quot;open = false&quot;&gt;
                                 &lt;div class=&quot;panel border-0 p-0 rounded-lg overflow-hidden w-full max-w-lg my-8 animate__animated&quot; :class=&quot;$store.app.rtlClass === 'rtl' ? 'animate__rotateInDownRight' : 'animate__rotateInDownLeft'&quot;&gt;
                                     &lt;div class=&quot;flex bg-[#fbfbfb] dark:bg-[#121c2c] items-center justify-between px-5 py-3&quot;&gt;
@@ -2895,7 +2895,7 @@
                         &lt;button type=&quot;button&quot; class=&quot;btn btn-dark&quot; @click=&quot;toggle&quot;&gt;FadeIn Right&lt;/button&gt;
                             
                         &lt;!-- modal --&gt;
-                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-[999] hidden overflow-y-auto&quot; :class=&quot;open &amp;&amp; '!block'&quot;&gt;
+                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-999 hidden overflow-y-auto&quot; :class=&quot;open &amp;&amp; 'block!'&quot;&gt;
                             &lt;div class=&quot;flex items-start justify-center min-h-screen px-4&quot; @click.self=&quot;open = false&quot;&gt;
                                 &lt;div class=&quot;panel border-0 p-0 rounded-lg overflow-hidden w-full max-w-lg my-8 animate__animated&quot; :class=&quot;$store.app.rtlClass === 'rtl' ? 'animate__fadeInLeft' : 'animate__fadeInRight'&quot;&gt;
                                     &lt;div class=&quot;flex bg-[#fbfbfb] dark:bg-[#121c2c] items-center justify-between px-5 py-3&quot;&gt;
@@ -2924,7 +2924,7 @@
                         &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; @click=&quot;toggle&quot;&gt;ZoomIn Up&lt;/button&gt;
                         
                         &lt;!-- modal --&gt;
-                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-[999] hidden overflow-y-auto&quot; :class=&quot;open &amp;&amp; '!block'&quot;&gt;
+                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-999 hidden overflow-y-auto&quot; :class=&quot;open &amp;&amp; 'block!'&quot;&gt;
                             &lt;div class=&quot;flex items-start justify-center min-h-screen px-4&quot; @click.self=&quot;open = false&quot;&gt;
                                 &lt;div class=&quot;panel border-0 p-0 rounded-lg overflow-hidden w-full max-w-lg my-8 animate__animated animate__zoomInUp&quot;&gt;
                                     &lt;div class=&quot;flex bg-[#fbfbfb] dark:bg-[#121c2c] items-center justify-between px-5 py-3&quot;&gt;
@@ -3012,7 +3012,7 @@
                                         <!-- standard  -->
                                         <div x-data="modal">
                                             <button type="button" class="btn btn-primary" @click="toggle">استاندارد</button>
-                                            <div class="fixed inset-0 z-[999] hidden overflow-y-auto bg-[black]/60" :class="open && '!block'">
+                                            <div class="fixed inset-0 z-999 hidden overflow-y-auto bg-[black]/60" :class="open && 'block!'">
                                                 <div class="flex items-start justify-center min-h-screen px-4" @click.self="open = false">
                                                     <div
                                                         x-show="open"
@@ -3059,7 +3059,7 @@
                                         <!-- tabs -->
                                         <div x-data="modal">
                                             <button type="button" class="btn btn-info" @click="toggle">تب دار</button>
-                                            <div class="fixed inset-0 z-[999] hidden overflow-y-auto bg-[black]/60" :class="open && '!block'">
+                                            <div class="fixed inset-0 z-999 hidden overflow-y-auto bg-[black]/60" :class="open && 'block!'">
                                                 <div class="flex items-start justify-center min-h-screen px-4" @click.self="open = false">
                                                     <div
                                                         x-show="open"
@@ -3095,7 +3095,7 @@
                                                                             <a
                                                                                 href="javascript:;"
                                                                                 class="-mb-[1px] block border border-transparent p-3.5 py-2 hover:text-primary dark:hover:border-b-black"
-                                                                                :class="{'!border-white-light !border-b-white  text-primary dark:!border-[#191e3a] dark:!border-b-black' : tab  === 'home'}"
+                                                                                :class="{'border-white-light! border-b-white!  text-primary dark:border-[#191e3a]! dark:border-b-black!' : tab  === 'home'}"
                                                                                 @click="tab = 'home'"
                                                                                 >خانه</a
                                                                             >
@@ -3104,7 +3104,7 @@
                                                                             <a
                                                                                 href="javascript:;"
                                                                                 class="-mb-[1px] block border border-transparent p-3.5 py-2 hover:text-primary dark:hover:border-[#191e3a] dark:hover:border-b-black"
-                                                                                :class="{'!border-white-light !border-b-white text-primary dark:!border-[#191e3a] dark:!border-b-black' : tab  === 'profile'}"
+                                                                                :class="{'border-white-light! border-b-white! text-primary dark:border-[#191e3a]! dark:border-b-black!' : tab  === 'profile'}"
                                                                                 @click="tab = 'profile'"
                                                                                 >پروفایل</a
                                                                             >
@@ -3113,7 +3113,7 @@
                                                                             <a
                                                                                 href="javascript:;"
                                                                                 class="-mb-[1px] block border border-transparent p-3.5 py-2 hover:text-primary dark:hover:border-[#191e3a] dark:hover:border-b-black"
-                                                                                :class="{'!border-white-light !border-b-white text-primary dark:!border-[#191e3a] dark:!border-b-black' : tab  === 'contact'}"
+                                                                                :class="{'border-white-light! border-b-white! text-primary dark:border-[#191e3a]! dark:border-b-black!' : tab  === 'contact'}"
                                                                                 @click="tab = 'contact'"
                                                                                 >تماس</a
                                                                             >
@@ -3182,7 +3182,7 @@
                                         <!-- profile -->
                                         <div x-data="modal">
                                             <button type="button" class="btn btn-success" @click="toggle">پروفایل</button>
-                                            <div class="fixed inset-0 z-[999] hidden overflow-y-auto bg-[black]/60" :class="open && '!block'">
+                                            <div class="fixed inset-0 z-999 hidden overflow-y-auto bg-[black]/60" :class="open && 'block!'">
                                                 <div class="flex items-start justify-center min-h-screen px-4" @click.self="open = false">
                                                     <div
                                                         x-show="open"
@@ -3228,7 +3228,7 @@
                                         <!-- login -->
                                         <div x-data="modal">
                                             <button type="button" class="btn btn-warning" @click="toggle">ورود</button>
-                                            <div class="fixed inset-0 z-[999] hidden overflow-y-auto bg-[black]/60" :class="open && '!block'">
+                                            <div class="fixed inset-0 z-999 hidden overflow-y-auto bg-[black]/60" :class="open && 'block!'">
                                                 <div class="flex items-start justify-center min-h-screen px-4" @click.self="open = false">
                                                     <div
                                                         x-show="open"
@@ -3366,7 +3366,7 @@
                                         <!-- Register -->
                                         <div x-data="modal">
                                             <button type="button" class="btn btn-danger" @click="toggle">ثبت نام</button>
-                                            <div class="fixed inset-0 z-[999] hidden overflow-y-auto bg-[black]/60" :class="open && '!block'">
+                                            <div class="fixed inset-0 z-999 hidden overflow-y-auto bg-[black]/60" :class="open && 'block!'">
                                                 <div class="flex items-start justify-center min-h-screen px-4" @click.self="open = false">
                                                     <div
                                                         x-show="open"
@@ -3529,7 +3529,7 @@
                                         <!-- slider -->
                                         <div x-data="modal">
                                             <button type="button" class="btn btn-secondary" @click="toggle">اسلایدر</button>
-                                            <div class="fixed inset-0 z-[999] hidden overflow-y-auto bg-[black]/60" :class="open && '!block'">
+                                            <div class="fixed inset-0 z-999 hidden overflow-y-auto bg-[black]/60" :class="open && 'block!'">
                                                 <div class="flex items-start justify-center min-h-screen px-4" @click.self="open = false">
                                                     <div
                                                         x-show="open"
@@ -3571,7 +3571,7 @@
                                                             </div>
                                                             <a
                                                                 href="javascript:;"
-                                                                class="swiper-button-prev-ex absolute top-1/2 z-[999] grid -translate-y-1/2 place-content-center rounded-full border border-primary p-1 text-primary transition hover:border-primary hover:bg-primary hover:text-white ltr:left-2 rtl:right-2"
+                                                                class="swiper-button-prev-ex absolute top-1/2 z-999 grid -translate-y-1/2 place-content-center rounded-full border border-primary p-1 text-primary transition hover:border-primary hover:bg-primary hover:text-white ltr:left-2 rtl:right-2"
                                                             >
                                                                 <svg
                                                                     width="24"
@@ -3592,7 +3592,7 @@
                                                             </a>
                                                             <a
                                                                 href="javascript:;"
-                                                                class="swiper-button-next-ex absolute top-1/2 z-[999] grid -translate-y-1/2 place-content-center rounded-full border border-primary p-1 text-primary transition hover:border-primary hover:bg-primary hover:text-white ltr:right-2 rtl:left-2"
+                                                                class="swiper-button-next-ex absolute top-1/2 z-999 grid -translate-y-1/2 place-content-center rounded-full border border-primary p-1 text-primary transition hover:border-primary hover:bg-primary hover:text-white ltr:right-2 rtl:left-2"
                                                             >
                                                                 <svg
                                                                     width="24"
@@ -3620,14 +3620,14 @@
                                     </div>
                                 </div>
                                 <template x-if="codeArr.includes('code8')">
-                                    <pre class="code overflow-auto rounded-md !bg-[#191e3a] p-4 text-white">
+                                    <pre class="code overflow-auto rounded-md bg-[#191e3a]! p-4 text-white">
                     &lt;!-- standard  --&gt;
                     &lt;div x-data=&quot;modal&quot;&gt;
                         &lt;!-- button  --&gt;
                         &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; @click=&quot;toggle&quot;&gt;Standard&lt;/button&gt;
                         
                         &lt;!-- modal  --&gt;
-                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-[999] hidden overflow-y-auto&quot; :class=&quot;open &amp;&amp; '!block'&quot;&gt;
+                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-999 hidden overflow-y-auto&quot; :class=&quot;open &amp;&amp; 'block!'&quot;&gt;
                             &lt;div class=&quot;flex items-start justify-center min-h-screen px-4&quot; @click.self=&quot;open = false&quot;&gt;
                                 &lt;div x-show=&quot;open&quot; x-transition x-transition.duration.300 class=&quot;panel border-0 p-0 rounded-lg overflow-hidden w-full max-w-lg my-8&quot;&gt;
                                     &lt;div class=&quot;flex py-2 bg-[#fbfbfb] dark:bg-[#121c2c] items-center justify-center&quot;&gt;
@@ -3655,7 +3655,7 @@
                         &lt;button type=&quot;button&quot; class=&quot;btn btn-info&quot; @click=&quot;toggle&quot;&gt;Tabs&lt;/button&gt;
                         
                         &lt;!-- modal --&gt;
-                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-[999] hidden overflow-y-auto&quot; :class=&quot;open &amp;&amp; '!block'&quot;&gt;
+                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-999 hidden overflow-y-auto&quot; :class=&quot;open &amp;&amp; 'block!'&quot;&gt;
                             &lt;div class=&quot;flex items-start justify-center min-h-screen px-4&quot; @click.self=&quot;open = false&quot;&gt;
                                 &lt;div x-show=&quot;open&quot; x-transition x-transition.duration.300 class=&quot;panel border-0 p-0 rounded-lg overflow-hidden w-full max-w-lg my-8&quot;&gt;
                                     &lt;div class=&quot;flex bg-[#fbfbfb] dark:bg-[#121c2c] items-center justify-between px-5 py-3&quot;&gt;
@@ -3669,13 +3669,13 @@
                                             &lt;div&gt;
                                                 &lt;ul class=&quot;flex flex-wrap mt-3 border-b border-white-light dark:border-[#191e3a]&quot;&gt;
                                                     &lt;li&gt;
-                                                        &lt;a href=&quot;javascript:;&quot; class=&quot;p-3.5 py-2 -mb-[1px] block border border-transparent hover:text-primary dark:hover:border-b-black&quot; :class=&quot;{'!border-white-light !border-b-white  text-primary dark:!border-[#191e3a] dark:!border-b-black' : tab  === 'home'}&quot; @click=&quot;tab = 'home'&quot;&gt;Home&lt;/a&gt;
+                                                        &lt;a href=&quot;javascript:;&quot; class=&quot;p-3.5 py-2 -mb-[1px] block border border-transparent hover:text-primary dark:hover:border-b-black&quot; :class=&quot;{'border-white-light! border-b-white!  text-primary dark:border-[#191e3a]! dark:border-b-black!' : tab  === 'home'}&quot; @click=&quot;tab = 'home'&quot;&gt;Home&lt;/a&gt;
                                                     &lt;/li&gt;
                                                     &lt;li&gt;
-                                                        &lt;a href=&quot;javascript:;&quot; class=&quot;p-3.5 py-2 -mb-[1px] block border border-transparent hover:text-primary dark:hover:border-[#191e3a] dark:hover:border-b-black&quot; :class=&quot;{'!border-white-light !border-b-white text-primary dark:!border-[#191e3a] dark:!border-b-black' : tab  === 'profile'}&quot; @click=&quot;tab = 'profile'&quot;&gt;Profile&lt;/a&gt;
+                                                        &lt;a href=&quot;javascript:;&quot; class=&quot;p-3.5 py-2 -mb-[1px] block border border-transparent hover:text-primary dark:hover:border-[#191e3a] dark:hover:border-b-black&quot; :class=&quot;{'border-white-light! border-b-white! text-primary dark:border-[#191e3a]! dark:border-b-black!' : tab  === 'profile'}&quot; @click=&quot;tab = 'profile'&quot;&gt;Profile&lt;/a&gt;
                                                     &lt;/li&gt;
                                                     &lt;li&gt;
-                                                        &lt;a href=&quot;javascript:;&quot; class=&quot;p-3.5 py-2 -mb-[1px] block border border-transparent hover:text-primary dark:hover:border-[#191e3a] dark:hover:border-b-black&quot; :class=&quot;{'!border-white-light !border-b-white text-primary dark:!border-[#191e3a] dark:!border-b-black' : tab  === 'contact'}&quot; @click=&quot;tab = 'contact'&quot;&gt;Contact&lt;/a&gt;
+                                                        &lt;a href=&quot;javascript:;&quot; class=&quot;p-3.5 py-2 -mb-[1px] block border border-transparent hover:text-primary dark:hover:border-[#191e3a] dark:hover:border-b-black&quot; :class=&quot;{'border-white-light! border-b-white! text-primary dark:border-[#191e3a]! dark:border-b-black!' : tab  === 'contact'}&quot; @click=&quot;tab = 'contact'&quot;&gt;Contact&lt;/a&gt;
                                                     &lt;/li&gt;
                                                     &lt;li&gt;
                                                         &lt;a href=&quot;javascript:;&quot; class=&quot;p-3.5 py-2 -mb-[1px] block pointer-events-none text-white-light dark:text-dark&quot;&gt;Disabled&lt;/a&gt;
@@ -3727,7 +3727,7 @@
                         &lt;button type=&quot;button&quot; class=&quot;btn btn-success&quot; @click=&quot;toggle&quot;&gt;Profile&lt;/button&gt;
                         
                         &lt;!-- modal --&gt;
-                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-[999] hidden overflow-y-auto&quot; :class=&quot;open &amp;&amp; '!block'&quot;&gt;
+                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-999 hidden overflow-y-auto&quot; :class=&quot;open &amp;&amp; 'block!'&quot;&gt;
                             &lt;div class=&quot;flex items-start justify-center min-h-screen px-4&quot; @click.self=&quot;open = false&quot;&gt;
                                 &lt;div x-show=&quot;open&quot; x-transition x-transition.duration.300 class=&quot;panel border-0 p-0 rounded-lg overflow-hidden w-11/12 sm:w-[300px] bg-secondary dark:bg-secondary my-8&quot;&gt;
                                     &lt;div class=&quot;flex items-center justify-end pt-4 ltr:pr-4 rtl:pl-4 text-white dark:text-white-light&quot;&gt;
@@ -3756,7 +3756,7 @@
                         &lt;button type=&quot;button&quot; class=&quot;btn btn-warning&quot; @click=&quot;toggle&quot;&gt;Login&lt;/button&gt;
                         
                         &lt;!-- modal --&gt;
-                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-[999] hidden overflow-y-auto&quot; :class=&quot;open &amp;&amp; '!block'&quot;&gt;
+                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-999 hidden overflow-y-auto&quot; :class=&quot;open &amp;&amp; 'block!'&quot;&gt;
                             &lt;div class=&quot;flex items-start justify-center min-h-screen px-4&quot; @click.self=&quot;open = false&quot;&gt;
                                 &lt;div x-show=&quot;open&quot; x-transition x-transition.duration.300 class=&quot;panel border-0 py-1 px-4 rounded-lg overflow-hidden w-full max-w-sm my-8&quot;&gt;
                                     &lt;div class=&quot;flex items-center justify-between p-5 font-semibold text-lg dark:text-white&quot;&gt;Login
@@ -3806,7 +3806,7 @@
                         &lt;button type=&quot;button&quot; class=&quot;btn btn-danger&quot; @click=&quot;toggle&quot;&gt;Register&lt;/button&gt;
                         
                         &lt;!-- modal --&gt;
-                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-[999] hidden overflow-y-auto&quot; :class=&quot;open &amp;&amp; '!block'&quot;&gt;
+                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-999 hidden overflow-y-auto&quot; :class=&quot;open &amp;&amp; 'block!'&quot;&gt;
                             &lt;div class=&quot;flex items-start justify-center min-h-screen px-4&quot; @click.self=&quot;open = false&quot;&gt;
                                 &lt;div x-show=&quot;open&quot; x-transition x-transition.duration.300 class=&quot;panel border-0 py-1 px-4 rounded-lg overflow-hidden w-full max-w-sm my-8&quot;&gt;
                                     &lt;div class=&quot;flex items-center justify-between p-5 font-semibold text-lg dark:text-white&quot;&gt;Register
@@ -3862,7 +3862,7 @@
                         &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot; @click=&quot;toggle&quot;&gt;Slider&lt;/button&gt;
                         
                         &lt;!-- modal --&gt;
-                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-[999] hidden overflow-y-auto&quot; :class=&quot;open &amp;&amp; '!block'&quot;&gt;
+                        &lt;div class=&quot;fixed inset-0 bg-[black]/60 z-999 hidden overflow-y-auto&quot; :class=&quot;open &amp;&amp; 'block!'&quot;&gt;
                             &lt;div class=&quot;flex items-start justify-center min-h-screen px-4&quot; @click.self=&quot;open = false&quot;&gt;
                                 &lt;div x-show=&quot;open&quot; x-transition x-transition.duration.300 class=&quot;panel border-0 py-1 px-4 rounded-lg overflow-hidden w-full max-w-xl my-8&quot;&gt;
                                     &lt;div class=&quot;flex items-center justify-between p-5 font-semibold text-lg dark:text-white&quot;&gt;Slider
@@ -3882,12 +3882,12 @@
                                                 &lt;img src=&quot;/assets/images/carousel3.jpeg&quot; class=&quot;w-full&quot; alt=&quot;image&quot; /&gt;
                                             &lt;/div&gt;
                                         &lt;/div&gt;
-                                        &lt;a href=&quot;javascript:;&quot; class=&quot;swiper-button-prev-ex grid place-content-center left-2 p-1 transition text-primary hover:text-white border border-primary  hover:border-primary hover:bg-primary rounded-full absolute z-[999] top-1/2 -translate-y-1/2&quot;&gt;
+                                        &lt;a href=&quot;javascript:;&quot; class=&quot;swiper-button-prev-ex grid place-content-center left-2 p-1 transition text-primary hover:text-white border border-primary  hover:border-primary hover:bg-primary rounded-full absolute z-999 top-1/2 -translate-y-1/2&quot;&gt;
                                             &lt;i class=&quot;w-5 h-5&quot;&gt;
                                                 &lt;svg&gt; ... &lt;/svg&gt;
                                             &lt;/i&gt;
                                         &lt;/a&gt;
-                                        &lt;a href=&quot;javascript:;&quot; class=&quot;swiper-button-next-ex grid place-content-center right-2 p-1 transition text-primary hover:text-white border border-primary  hover:border-primary hover:bg-primary rounded-full absolute z-[999] top-1/2 -translate-y-1/2&quot;&gt;
+                                        &lt;a href=&quot;javascript:;&quot; class=&quot;swiper-button-next-ex grid place-content-center right-2 p-1 transition text-primary hover:text-white border border-primary  hover:border-primary hover:bg-primary rounded-full absolute z-999 top-1/2 -translate-y-1/2&quot;&gt;
                                             &lt;i class=&quot;w-5 h-5&quot;&gt;
                                                 &lt;svg&gt; ... &lt;/svg&gt;
                                             &lt;/i&gt;
@@ -3920,7 +3920,7 @@
                     <!-- end main content section -->
 
                     <!-- start footer section -->
-                    <p class="pt-6 text-center dark:text-white-dark ltr:sm:text-left rtl:sm:text-right">
+                    <p class="pt-6 text-center dark:text-white-dark sm:ltr:text-left sm:rtl:text-right">
                         © <span id="footer-year">2022</span>. تمام حقوق مادی و معنوی محفوظ است.
                     </p>
                     <!-- end footer section -->

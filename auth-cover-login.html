@@ -21,7 +21,7 @@
         :class="[ $store.app.sidebar ? 'toggle-sidebar' : '', $store.app.theme, $store.app.menu, $store.app.layout,$store.app.rtlClass]"
     >
         <!-- screen loader -->
-        <div class="screen_loader animate__animated fixed inset-0 z-[60] grid place-content-center bg-[#fafafa] dark:bg-[#060818]">
+        <div class="screen_loader animate__animated fixed inset-0 z-60 grid place-content-center bg-[#fafafa] dark:bg-[#060818]">
             <svg width="64" height="64" viewBox="0 0 135 135" xmlns="http://www.w3.org/2000/svg" fill="#4361ee">
                 <path
                     d="M67.447 58c5.523 0 10-4.477 10-10s-4.477-10-10-10-10 4.477-10 10 4.477 10 10 10zm9.448 9.447c0 5.523 4.477 10 10 10 5.522 0 10-4.477 10-10s-4.478-10-10-10c-5.523 0-10 4.477-10 10zm-9.448 9.448c-5.523 0-10 4.477-10 10 0 5.522 4.477 10 10 10s10-4.478 10-10c0-5.523-4.477-10-10-10zM58 67.447c0-5.523-4.477-10-10-10s-10 4.477-10 10 4.477 10 10 10 10-4.477 10-10z"
@@ -61,7 +61,7 @@
             <!-- start main content section -->
             <div class="flex min-h-screen">
                 <div
-                    class="hidden min-h-screen w-1/2 flex-col items-center justify-center bg-gradient-to-t from-[#ff1361bf] to-[#44107A] p-4 text-white dark:text-black lg:flex"
+                    class="hidden min-h-screen w-1/2 flex-col items-center justify-center bg-linear-to-t from-[#ff1361bf] to-[#44107A] p-4 text-white dark:text-black lg:flex"
                 >
                     <div class="w-full mx-auto mb-5">
                         <img src="assets/images/auth-cover.svg" alt="coming_soon" class="mx-auto lg:max-w-[370px] xl:max-w-[500px]" />
@@ -93,7 +93,7 @@
                         <div
                             class="relative my-7 h-5 text-center before:absolute before:inset-0 before:m-auto before:h-[1px] before:w-full before:bg-[#ebedf2] dark:before:bg-[#253b5c]"
                         >
-                            <div class="relative z-[1] inline-block bg-[#fafafa] px-2 font-bold text-white-dark dark:bg-[#060818]"><span>یا</span></div>
+                            <div class="relative z-1 inline-block bg-[#fafafa] px-2 font-bold text-white-dark dark:bg-[#060818]"><span>یا</span></div>
                         </div>
                         <ul class="flex justify-center gap-2 mb-5 sm:gap-5">
                             <li>
